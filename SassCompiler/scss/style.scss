@@ -1,0 +1,12 @@
+//variables
+$color-fondo: #6ea7fd;
+$color-fuente: #fff;
+body {
+  background-color: $color-fondo;
+  color: $color-fuente;
+}
+h1 {
+  color: rgb(128, 30, 0);
+  background-color: red;
+  font-size: 20pt;
+}

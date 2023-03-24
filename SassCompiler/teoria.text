@@ -1,0 +1,14 @@
+dentro de carpeta *****sassCompiler*****
+    sass style.scss style.css
+esto me genera el .css de el .scss
+y cada vez q se cambie el .scss se debe actualizar con el comando
+    sass style.scss style.css
+    me crea un.map
+
+automatizar
+borro los estilos css
+pongo en carpetas css y otra de scss
+    scss sass/style.scss css/style.css
+    se crean los css
+        sass --watch scss/style.scss css/style.css
+        este solo una vez
