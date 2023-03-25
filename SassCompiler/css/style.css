@@ -26,6 +26,7 @@
 .card .card-body a {
   color: #0355fb;
   text-decoration: none;
+  font-size: 0.5rem;
 }
 
 body {

@@ -1,3 +1,5 @@
+@use "sass:math";//libreria de funciones matematicas
+
 //variables colores
 $color-fondo-principal: #69695e;
 $color-fuente: #131111;
@@ -8,6 +10,7 @@ $fuente-principal: 'Lato', sans-serif;
 
 //tamaños de fuente
 $font-size-base: 1rem;
+$font-size-xsm: math.div($font-size-base, 2) ;
 $font-size-sm: $font-size-base * 0.75;
 $font-size-lg: $font-size-base * 1.5;
 $font-size-xl: $font-size-base * 2;
@@ -18,4 +21,9 @@ $font-size-xxl: $font-size-base * 3;
 @debug $font-size-xxl;
 @debug $font-size-xxl + 1;
 @debug $font-size-xxl - 0.5;
+
+@debug math.div(20 , 2);
+@debug math.div(80px , 2);
+
+@debug $font-size-xsm;
 
