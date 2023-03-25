@@ -1,7 +1,8 @@
 // este ya esta fuera de uso @import "variables";
 @use "reset";
-@use "fuente";
+@use "fonts";
 @use "variables" as var;
+@use "colors";
 @use "components";
 
 body {
