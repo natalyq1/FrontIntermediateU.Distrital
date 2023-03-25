@@ -5,6 +5,28 @@
   box-sizing: border-box;
 }
 
+.card {
+  background-color: #c7c7c7;
+  display: block;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6117647059);
+  font-family: "Lato", sans-serif;
+  border-radius: 7px;
+}
+.card .card-title {
+  border-bottom: 1px solid rgb(42, 45, 42);
+  margin-bottom: 0.9em;
+}
+.card .card-body {
+  color: #131111;
+  font-size: 0.8rem;
+}
+.card .card-body a {
+  color: #0355fb;
+  text-decoration: none;
+}
+
 body {
   background-color: #69695e;
   color: #131111;

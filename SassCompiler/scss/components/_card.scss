@@ -1,0 +1,23 @@
+@use "../variables" as var;
+
+.card{
+    background-color: #c7c7c7;
+    display: block;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 3px 3px 5px #0000009c;
+    font-family: var.$fuente-principal;
+    border-radius: 7px;
+    .card-title{
+        border-bottom: 1px solid rgb(42, 45, 42);
+        margin-bottom: 0.9em;
+    }
+    .card-body{
+        color: var.$color-fuente;
+        font-size: 0.8rem;
+        a{
+            color: var.$color-link;
+            text-decoration: none;
+        }
+    }
+}

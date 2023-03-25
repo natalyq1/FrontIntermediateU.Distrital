@@ -2,7 +2,7 @@
 @use "reset";
 @use "fuente";
 @use "variables" as var;
-
+@use "components";
 
 body {
   background-color: var.$color-fondo-principal;
