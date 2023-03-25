@@ -1,9 +1,13 @@
-//variables
-$color-fondo: #6ea7fd;
-$color-fuente: #fff;
+// este ya esta fuera de uso @import "variables";
+@use "reset";
+@use "fuente";
+@use "variables" as var;
+
+
 body {
-  background-color: $color-fondo;
-  color: $color-fuente;
+  background-color: var.$color-fondo-principal;
+  color: var.$color-fuente;
+  font-family: var.$fuente-principal;
 }
 h1 {
   color: rgb(128, 30, 0);
