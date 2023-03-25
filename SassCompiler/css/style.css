@@ -29,6 +29,12 @@
   font-size: 0.5rem;
 }
 
+.btn {
+  outline: none;
+  background-color: #5263fa;
+  color: #fff;
+}
+
 body {
   background-color: #69695e;
   color: #131111;

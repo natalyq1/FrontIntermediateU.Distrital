@@ -1,1 +1,6 @@
 @use "../colors" as c;
+.btn{
+    outline: none;
+    background-color: map-get(c.$colors, "primary");
+    color: map-get(c.$colors, "white");
+}
