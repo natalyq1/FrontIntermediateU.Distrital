@@ -17,10 +17,11 @@
 .card .card-title {
   border-bottom: 1px solid rgb(42, 45, 42);
   margin-bottom: 0.9em;
+  font-size: 1.5rem;
 }
 .card .card-body {
   color: #131111;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .card .card-body a {
   color: #0355fb;

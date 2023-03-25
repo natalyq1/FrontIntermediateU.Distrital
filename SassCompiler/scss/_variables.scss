@@ -5,3 +5,17 @@ $color-link: #0355fb;
 
 //fuentes
 $fuente-principal: 'Lato', sans-serif;
+
+//tamaños de fuente
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.75;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-xl: $font-size-base * 2;
+$font-size-xxl: $font-size-base * 3;
+
+//Mostar valores en consola/terminal
+@debug "Universidad distrital";
+@debug $font-size-xxl;
+@debug $font-size-xxl + 1;
+@debug $font-size-xxl - 0.5;
+

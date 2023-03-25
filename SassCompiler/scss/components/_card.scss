@@ -11,10 +11,11 @@
     .card-title{
         border-bottom: 1px solid rgb(42, 45, 42);
         margin-bottom: 0.9em;
+        font-size: var.$font-size-lg;
     }
     .card-body{
         color: var.$color-fuente;
-        font-size: 0.8rem;
+        font-size: var.$font-size-base;
         a{
             color: var.$color-link;
             text-decoration: none;
