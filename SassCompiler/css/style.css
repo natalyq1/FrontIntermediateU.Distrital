@@ -12,7 +12,7 @@
   margin: 1em;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6117647059);
   font-family: "Lato", sans-serif;
-  border-radius: 7px;
+  border-radius: 20px, 2;
 }
 .card .card-title {
   border-bottom: 1px solid rgb(42, 45, 42);

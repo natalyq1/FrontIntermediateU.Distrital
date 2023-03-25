@@ -16,6 +16,10 @@ $font-size-lg: $font-size-base * 1.5;
 $font-size-xl: $font-size-base * 2;
 $font-size-xxl: $font-size-base * 3;
 
+//border radius
+$border-radius-base: 20px;
+$border-radius-sm: ($border-radius-base, 2);
+
 //Mostar valores en consola/terminal
 @debug "Universidad distrital";
 @debug $font-size-xxl;
