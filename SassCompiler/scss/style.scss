@@ -4,6 +4,7 @@
 @use "variables" as var;
 @use "colors";
 @use "components";
+@use "palette";
 
 body {
   background-color: var.$color-fondo-principal;

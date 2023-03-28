@@ -10,5 +10,10 @@ borro los estilos css
 pongo en carpetas css y otra de scss
     scss sass/style.scss css/style.css
     se crean los css
+    luego el comando para actualizar los scss
+        ************************************
+        ************************************
         sass --watch scss/style.scss css/style.css
-        este solo una vez
+        ************************************
+        ************************************
+        este solo una vez o cada que cierre mi proyecto y lo abara

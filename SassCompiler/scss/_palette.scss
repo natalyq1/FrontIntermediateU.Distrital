@@ -1,0 +1,7 @@
+@use "colors" as c;
+
+//recorre y muestra el map en terminal
+@each $key, $val in c.$colors {//puede ser cualquier nombre para las variables, los @ si son reservadas
+  @debug $key, $val;
+  //Debug: "black", #000
+}
