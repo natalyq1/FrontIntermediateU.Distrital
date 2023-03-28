@@ -11,7 +11,15 @@
   //background
   .bg-#{$key} {
     background-color: $val;
+  }  
+  @for $i from 1 through 9{
+    .text-#{$key}-light-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        color: mix(white, $val, $i *10%);
+    }
   }
-  
-  
 }
+
+//@for $i from 10 through 20 {
+//    @debug $i
+//}
