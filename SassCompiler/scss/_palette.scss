@@ -13,9 +13,15 @@
     background-color: $val;
   }  
   @for $i from 1 through 9{
+    //variacion texto claro
     .text-#{$key}-light-#{$i} {
         //color 1, color2, porcentaje de mezcla
         color: mix(white, $val, $i *10%);
+    }
+    //variacion background claro
+    .bg-#{$key}-light-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        background-color: mix(white, $val, $i *10%);
     }
   }
 }
