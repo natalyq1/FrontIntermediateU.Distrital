@@ -39,32 +39,64 @@
   color: #5263fa;
 }
 
+.bg-primary {
+  background-color: #5263fa;
+}
+
 .text-secondary {
   color: #fa52f7;
+}
+
+.bg-secondary {
+  background-color: #fa52f7;
 }
 
 .text-error {
   color: #fa5252;
 }
 
+.bg-error {
+  background-color: #fa5252;
+}
+
 .text-info {
   color: #52bffa;
+}
+
+.bg-info {
+  background-color: #52bffa;
 }
 
 .text-success {
   color: #98fa52;
 }
 
+.bg-success {
+  background-color: #98fa52;
+}
+
 .text-warning {
   color: #faa952;
+}
+
+.bg-warning {
+  background-color: #faa952;
 }
 
 .text-white {
   color: #fff;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
 .text-black {
   color: #000;
+}
+
+.bg-black {
+  background-color: #000;
 }
 
 body {
@@ -77,6 +109,10 @@ h1 {
   color: rgb(128, 30, 0);
   background-color: red;
   font-size: 20pt;
+}
+
+.text {
+  font-family: "Lato", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
