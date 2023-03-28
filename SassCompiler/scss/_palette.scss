@@ -2,6 +2,15 @@
 
 //recorre y muestra el map en terminal
 @each $key, $val in c.$colors {//puede ser cualquier nombre para las variables, los @ si son reservadas
-  @debug $key, $val;
-  //Debug: "black", #000
+  //@debug $key, $val;//Debug: "black", #000
+
+  //crea una clase por cada color en el css
+  .text-#{$key}{
+    color: $val;
+  }
+  /*css
+  .text-primary {
+  color: #5263fa;
+}*/
+  
 }

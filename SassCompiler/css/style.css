@@ -35,6 +35,70 @@
   color: #fff;
 }
 
+.text-primary {
+  color: #5263fa;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
+.text-secondary {
+  color: #fa52f7;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
+.text-error {
+  color: #fa5252;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
+.text-info {
+  color: #52bffa;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
+.text-success {
+  color: #98fa52;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
+.text-warning {
+  color: #faa952;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
+.text-white {
+  color: #fff;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
+.text-black {
+  color: #000;
+}
+
+/*css
+  .text-primary {
+  color: #5263fa;
+}*/
 body {
   background-color: #69695e;
   color: #131111;
