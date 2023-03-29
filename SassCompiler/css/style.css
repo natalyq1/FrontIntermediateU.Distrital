@@ -1251,6 +1251,34 @@
   background-color: black;
 }
 
+.generada-if {
+  color: blue;
+}
+
+.generada-if-second {
+  color: rgb(0, 204, 255);
+}
+
+.mayor-5 {
+  color: rgb(255, 0, 217);
+}
+
+.igual-20 {
+  color: rgb(23, 180, 112);
+}
+
+.d-ninguna {
+  color: rgb(17, 79, 87);
+}
+
+.infant {
+  color: white;
+}
+
+.cero-o-uno {
+  color: red;
+}
+
 body {
   background-color: #69695e;
   color: #131111;

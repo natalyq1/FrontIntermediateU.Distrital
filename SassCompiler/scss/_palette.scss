@@ -1,40 +1,41 @@
 @use "colors" as c;
 
 //recorre y muestra el map en terminal
-@each $key, $val in c.$colors {//puede ser cualquier nombre para las variables, los @ si son reservadas
+@each $key, $val in c.$colors {
+  //puede ser cualquier nombre para las variables, los @ si son reservadas
   //@debug $key, $val;//Debug: "black", #000
 
   //crea una clase por cada color en el css
-  .text-#{$key}{
+  .text-#{$key} {
     color: $val;
   }
   //background
   .bg-#{$key} {
     background-color: $val;
-  }  
-  @for $i from 1 through 9{
+  }
+  @for $i from 1 through 9 {
     //variacion texto claro
     .text-#{$key}-light-#{$i} {
-        //color 1, color2, porcentaje de mezcla
-        color: mix(white, $val, $i *10%);
+      //color 1, color2, porcentaje de mezcla
+      color: mix(white, $val, $i * 10%);
     }
     //variacion background claro
     .bg-#{$key}-light-#{$i} {
-        //color 1, color2, porcentaje de mezcla
-        background-color: mix(white, $val, $i *10%);
+      //color 1, color2, porcentaje de mezcla
+      background-color: mix(white, $val, $i * 10%);
     }
   }
 
-  @for $i from 1 through 9{
+  @for $i from 1 through 9 {
     //variacion texto claro
     .text-#{$key}-dark-#{$i} {
-        //color 1, color2, porcentaje de mezcla
-        color: mix(black, $val, $i *10%);
+      //color 1, color2, porcentaje de mezcla
+      color: mix(black, $val, $i * 10%);
     }
     //variacion background claro
     .bg-#{$key}-dark-#{$i} {
-        //color 1, color2, porcentaje de mezcla
-        background-color: mix(black, $val, $i *10%);
+      //color 1, color2, porcentaje de mezcla
+      background-color: mix(black, $val, $i * 10%);
     }
   }
 }
@@ -42,3 +43,84 @@
 //@for $i from 10 through 20 {
 //    @debug $i
 //}
+
+//condicional if
+@if (5 > 1) {
+  .generada-if {
+    color: blue;
+  }
+}
+
+//condicional if con variable
+$a: 5;
+@if ($a > 3) {
+  .generada-if-second {
+    color: rgb(0, 204, 255);
+  }
+}
+
+//condicional if/else
+$b: 10;
+@if ($b > 5) {
+  .mayor-5 {
+    color: rgb(255, 0, 217);
+  }
+} @else {
+  .menor-5 {
+    color: greenyellow;
+  }
+}
+
+//condicional if/else/if
+$c: 20;
+@if ($c == 5) {
+  .igual-10 {
+    color: rgb(255, 0, 17);
+  }
+} @else {
+  @if ($c == 20) {
+    .igual-20 {
+      color: rgb(23, 180, 112);
+    }
+  }@else{
+    .diferente-10-20 {
+        color: black;
+    }
+  }
+}
+
+// Condicional if/else/if
+$d: 40;
+@if ($d == 10) {
+  .d-10 {
+    color: yellow;
+  }
+} @else if ($d == 20) {
+  .d-20 {
+    color: blue;
+  }
+} @else if ($d == 30) {
+  .d-30 {
+    color: red;
+  }
+} @else {
+  .d-ninguna {
+    color: rgb(17, 79, 87);
+  }
+}
+
+// AND
+// V -> Todos debe ser Verdaderos
+$edad: 1;
+@if ($edad >= 0 and $edad <= 10) {
+  .infant {
+    color: white;
+  }
+}
+// OR
+// V -> Al menos uno debe ser verdadero
+@if ($edad == 0 or $edad == 1) {
+  .cero-o-uno {
+    color: red;
+  }
+}
