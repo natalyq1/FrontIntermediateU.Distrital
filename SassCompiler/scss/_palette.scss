@@ -24,6 +24,19 @@
         background-color: mix(white, $val, $i *10%);
     }
   }
+
+  @for $i from 1 through 9{
+    //variacion texto claro
+    .text-#{$key}-dark-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        color: mix(black, $val, $i *10%);
+    }
+    //variacion background claro
+    .bg-#{$key}-dark-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        background-color: mix(black, $val, $i *10%);
+    }
+  }
 }
 
 //@for $i from 10 through 20 {
