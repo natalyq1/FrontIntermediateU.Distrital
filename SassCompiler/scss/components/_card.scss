@@ -1,25 +1,25 @@
 @use "../variables" as var;
 
-.card{
-    background-color: #c7c7c7;
-    display: block;
-    padding: 1em;
-    margin: 1em;
-    box-shadow: 3px 3px 5px #0000009c;
-    font-family: var.$fuente-principal;
-    border-radius: var.$border-radius-sm;
-    .card-title{
-        border-bottom: 1px solid rgb(42, 45, 42);
-        margin-bottom: 0.9em;
-        font-size: var.$font-size-lg;
+.card {
+  background-color: #c7c7c7;
+  display: block;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 3px 3px 5px #0000009c;
+  font-family: var.$font-base;
+  border-radius: var.$border-radius-sm;
+  .card-title {
+    border-bottom: 1px solid rgb(42, 45, 42);
+    margin-bottom: 0.9em;
+    font-size: var.$font-size-lg;
+  }
+  .card-body {
+    color: var.$color-font;
+    font-size: var.$font-size-base;
+    a {
+      color: var.$color-link;
+      text-decoration: none;
+      font-size: var.$font-size-xsm;
     }
-    .card-body{
-        color: var.$color-fuente;
-        font-size: var.$font-size-base;
-        a{
-            color: var.$color-link;
-            text-decoration: none;
-            font-size: var.$font-size-xsm;
-        }
-    }
+  }
 }

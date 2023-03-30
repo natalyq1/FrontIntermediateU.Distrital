@@ -1,0 +1,15 @@
+@use "variables";
+
+body {
+  background-color: var.$color-main-background;
+  color: var.$color-font;
+  font-family: var.$font-base;
+}
+h1 {
+  color: rgb(128, 30, 0);
+  background-color: red;
+  font-size: 20pt;
+}
+.text {
+  font-family: var.$font-base;
+}

@@ -1,16 +1,16 @@
-@use "sass:math";//libreria de funciones matematicas
+@use "sass:math"; //libreria de funciones matematicas
 
 //variables colores
-$color-fondo-principal: #69695e;
-$color-fuente: #131111;
+$color-main-background: #69695e;
+$color-font: #131111;
 $color-link: #0355fb;
 
 //fuentes
-$fuente-principal: 'Lato', sans-serif;
+$font-base: "Lato", sans-serif;
 
 //tamaños de fuente
 $font-size-base: 1rem;
-$font-size-xsm: math.div($font-size-base, 2) ;
+$font-size-xsm: math.div($font-size-base, 2);
 $font-size-sm: $font-size-base * 0.75;
 $font-size-lg: $font-size-base * 1.5;
 $font-size-xl: $font-size-base * 2;
@@ -18,7 +18,7 @@ $font-size-xxl: $font-size-base * 3;
 
 //border radius
 $border-radius-base: 20px;
-$border-radius-sm: ($border-radius-base, 2);
+$border-radius-sm: ($border-radius-base);
 
 //Mostar valores en consola/terminal
 @debug "Universidad distrital";
@@ -26,8 +26,7 @@ $border-radius-sm: ($border-radius-base, 2);
 @debug $font-size-xxl + 1;
 @debug $font-size-xxl - 0.5;
 
-@debug math.div(20 , 2);
-@debug math.div(80px , 2);
+@debug math.div(20, 2);
+@debug math.div(80px, 2);
 
 @debug $font-size-xsm;
-
