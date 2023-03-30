@@ -1,0 +1,32 @@
+//definicion de un Mixin
+@mixin alert($color: green, $corner:5px){
+    $border: 1px solid $color;
+    background-color: mix( white, $color , 60%);
+    border: $border;
+    padding: 10px 20px;
+    border-radius: $corner;
+    margin: 10px;
+
+    h3{
+        color: darken($color, 20%);
+        border-bottom: $border;
+        margin-bottom: 5px;
+    }
+    p{
+        color: mix(rgb(60, 56, 56), $color, 5%);
+    }
+}
+
+//uso de un Mixin
+.alert-success{
+    @include alert()
+}
+.alert-warning{
+    @include alert($color: orange, $corner:20px)
+}
+.alert-error{
+    @include alert($color: red)
+}
+.alert-info{
+    @include alert($color: rgb(29, 164, 209))
+}
