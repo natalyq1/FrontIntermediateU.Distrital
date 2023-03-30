@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as var;
 
 body {
   background-color: var.$color-main-background;

@@ -16,4 +16,13 @@ pongo en carpetas css y otra de scss
         sass --watch scss/style.scss css/style.css
         ************************************
         ************************************
-        este solo una vez o cada que cierre mi proyecto y lo abara
+        este solo una vez o cada que cierre mi proyecto y lo abra
+
+
+BEM
+BLOQUE, ELEMENTO, MODULO
+
+
+
+
+
