@@ -13,33 +13,38 @@
   .bg-#{$key} {
     background-color: $val;
   }
-  @for $i from 1 through 9 {
-    //variacion texto claro
-    .text-#{$key}-light-#{$i} {
-      //color 1, color2, porcentaje de mezcla
-      color: mix(white, $val, $i * 10%);
-    }
-    //variacion background claro
-    .bg-#{$key}-light-#{$i} {
-      //color 1, color2, porcentaje de mezcla
-      background-color: mix(white, $val, $i * 10%);
-    }
-  }
 
-  @for $i from 1 through 9 {
-    //variacion texto claro
-    .text-#{$key}-dark-#{$i} {
-      //color 1, color2, porcentaje de mezcla
-      color: mix(black, $val, $i * 10%);
+  //genera las variables de tonalidades
+  //si son colores diferentes a blanco y negro
+  @if ($val != white and $val != black) {
+    //generacion de variaciones claras
+    @for $i from 1 through 9 {
+      //variacion texto claro
+      .text-#{$key}-light-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        color: mix(white, $val, $i * 10%);
+      }
+      //variacion background claro
+      .bg-#{$key}-light-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        background-color: mix(white, $val, $i * 10%);
+      }
     }
-    //variacion background claro
-    .bg-#{$key}-dark-#{$i} {
-      //color 1, color2, porcentaje de mezcla
-      background-color: mix(black, $val, $i * 10%);
+
+    @for $i from 1 through 9 {
+      //variacion texto claro
+      .text-#{$key}-dark-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        color: mix(black, $val, $i * 10%);
+      }
+      //variacion background claro
+      .bg-#{$key}-dark-#{$i} {
+        //color 1, color2, porcentaje de mezcla
+        background-color: mix(black, $val, $i * 10%);
+      }
     }
   }
 }
-
 //@for $i from 10 through 20 {
 //    @debug $i
 //}
@@ -82,9 +87,9 @@ $c: 20;
     .igual-20 {
       color: rgb(23, 180, 112);
     }
-  }@else{
+  } @else {
     .diferente-10-20 {
-        color: black;
+      color: black;
     }
   }
 }
