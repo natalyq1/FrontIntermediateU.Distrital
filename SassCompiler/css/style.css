@@ -21,6 +21,12 @@ h1 {
   font-family: "Lato", sans-serif;
 }
 
+.div-alto {
+  width: 220px;
+  height: 310px;
+  background-color: red;
+}
+
 .card {
   background-color: #c7c7c7;
   display: block;
