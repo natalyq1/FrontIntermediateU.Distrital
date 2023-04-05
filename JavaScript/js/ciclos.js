@@ -51,3 +51,22 @@ while (contador5 < 5) {
   contador5++;
 }
 console.log(`El valor de la sumatoria es ${acumulador}`);
+
+//fibonacci
+console.log('fibonacci');
+const n = 5
+let actual = 0
+let anterior = 1
+let fibonacci = 0
+let contador = 0
+while (contador < n) {
+  console.log(`${actual} + ${anterior} = ${actual + anterior}`);
+  //caclcula el valor actual de la serie
+  fibonacci =anterior + actual
+  //cambio de la serie
+  actual = anterior
+  anterior = fibonacci
+  //aumento de contador
+  contador ++
+}
+console.log(`Fibonacci de ${n} es ${fibonacci}`);
