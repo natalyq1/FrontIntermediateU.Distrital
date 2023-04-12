@@ -44,3 +44,6 @@ mensaje2();
 mensaje3();
 
 console.log(esAdultoV1(10));
+
+console.log(sumarV1(20, 16));
+console.log(sumarV2(20, 20));
