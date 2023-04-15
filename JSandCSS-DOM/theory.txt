@@ -1,0 +1,3 @@
+DOM
+Document Object Model
+los elemnetos de html por jerarquia
