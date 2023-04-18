@@ -1,0 +1,21 @@
+section {
+  background: #8888fa;
+}
+ul#lista{
+  list-style-type: none;
+}
+ul#lista span:last-child{
+  color: rgb(250, 250, 250);
+  background-color: red;
+  border-radius: 5px;
+  padding: 0px 3px 3px 4px;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.terminada{
+  text-decoration: line-through;
+  color: green;
+}
