@@ -1,0 +1,36 @@
+TypeScript- lenguaje de programacion fuertemente tipado = tipado estatico, que genera codigo JS, brindando mejores herramientas a cualquier escala.
+permite interfaces y tuples, y tipos.
+Me permite ver errores en tiempo de desarrollo y no de ejecucion
+
+let numero: number = 10;
+numero = 'a'
+
+Osea no le puede cambiar el tipo de dato una vez declarado.
+
+Requiere node y node package manager
+    node --version && npm --version
+
+instalacion y ejecucio de TypeScript -g global
+    npm install -g typescript
+    tsc --version
+
+Pasar ts a JS y actualizar, transpelar
+    tsc hello.ts
+    me crea un hello.js
+
+    hello.ts
+    let edad: number = 25;
+    console.log(edad);
+
+    hello.js
+    var edad = 25;
+    console.log(edad);
+
+configurar transpilador
+    tsc --init
+    me crea un tsconfig.json
+
+    **************
+ACTUALIZAR el ts automaticamente
+tsc -watch hello.ts
+    **************
