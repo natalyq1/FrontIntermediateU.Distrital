@@ -26,11 +26,34 @@ Pasar ts a JS y actualizar, transpelar
     var edad = 25;
     console.log(edad);
 
-configurar transpilador
-    tsc --init
-    me crea un tsconfig.json
+
 
     **************
 ACTUALIZAR el ts automaticamente
 tsc -watch hello.ts
     **************
+
+go live index.html
+    <script src="hello.js"></script>
+    
+
+configurar transpilador
+    tsc --init
+    me crea un tsconfig.json
+     habilito
+     "rootDir": "./src/ts", 
+     "outDir": "./dist/js", 
+     "removeComments": true, 
+     "noEmitOnError": true, 
+     terminal   
+     tsc -w
+este ultimo esta pendiente de los cambios del ts para pasarlos automaticamente a js
+
+****
+En src creo una carpeta
+    scss
+        style.scss
+            Otra terminal
+                sass --watch src/scss/style.scss dist/css/style.css
+                    me genera el css en dist
+****
