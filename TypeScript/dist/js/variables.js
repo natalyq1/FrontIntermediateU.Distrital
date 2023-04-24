@@ -17,3 +17,8 @@ let variable;
 variable = 3;
 variable = 'Frontend';
 console.log(variable);
+let dato;
+dato = 10;
+dato = 'Backend';
+dato = false;
+console.log(dato);

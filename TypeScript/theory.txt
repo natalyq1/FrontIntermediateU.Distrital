@@ -46,7 +46,10 @@ configurar transpilador
      "removeComments": true, 
      "noEmitOnError": true, 
      terminal   
-     tsc -w
+     ***************
+     tsc --watch
+     y trabajo en ts/app.ts
+     ***************
 este ultimo esta pendiente de los cambios del ts para pasarlos automaticamente a js
 
 ****
@@ -57,3 +60,13 @@ En src creo una carpeta
                 sass --watch src/scss/style.scss dist/css/style.css
                     me genera el css en dist
 ****
+
+JS subset
+TS superset
+
+EN TypeScript
+no se puede cambiar el tipo de dato una vez se declarado
+
+Extensiones
+error lens
+pretty typescript errors
