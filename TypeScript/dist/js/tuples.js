@@ -1,0 +1,12 @@
+"use strict";
+console.log('TUPLES');
+let arreglo = ['Cata', 21, true];
+arreglo[0] = 122;
+arreglo[2] = 'Mary';
+console.log(arreglo);
+let tuple;
+let tuple2 = ['Emilio', 13];
+tuple = ['Valeria', 10, false];
+tuple[1] = 100;
+console.log(tuple);
+console.log(tuple2);
