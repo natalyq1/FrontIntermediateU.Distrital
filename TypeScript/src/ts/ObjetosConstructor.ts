@@ -7,8 +7,7 @@ class Train {
     //funcion reservada-->instancia el objeto y puede darle valores por defecto
     constructor(
         type: string, 
-        distance: number, 
-        date: string = 'today'){//a ese objeto type pongale lo que venga por esa misma propiedad
+        distance: number, date: string = 'today'){//a ese objeto type pongale lo que venga por esa misma propiedad
         this.type = type
         this.distance = distance
         this.date = date
