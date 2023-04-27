@@ -1,10 +1,10 @@
 "use strict";
 class Movie {
-    constructor(_name = "Phi", _year = 1995, _genre = "sci-fi") {
+    constructor(_name = "Phi", _year = 1995, _genre = "sci-fi", _comments = "abc") {
         this._name = _name;
         this._year = _year;
         this._genre = _genre;
-        this._comments = "abc";
+        this._comments = _comments;
     }
     get comments() {
         return this._comments;

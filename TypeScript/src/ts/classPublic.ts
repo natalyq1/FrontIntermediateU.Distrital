@@ -2,24 +2,14 @@
 
 //puede haber encapsulamineto public, readonly y private
 
+//version alterna de la clase con el constructor implicito
 class Movie {
-  //public es el valor por default
-  public _name: string;
-  //solo de lectura
-  readonly _year: number;
-  public _genre: string;
-  // private solo se puede leer/ escribir dentro de la clase
-  private _comments: string;
-
   constructor(
-    _name: string = "Phi",
-    _year: number = 1995,
-    _genre: string = "sci-fi"
-  ) {
-    this._name = _name;
-    this._year = _year;
-    this._genre = _genre;
-    this._comments = "abc";
+  public _name: string= "Phi",
+  readonly _year: number= 1995,
+  public _genre: string= "sci-fi",
+  private _comments: string= "abc"
+) {
   }
   public get comments() {//asi se crea una publica pero aun no se puede modificar
     return this._comments;
