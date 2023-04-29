@@ -3,7 +3,7 @@ console.log("modules");
 import { Training } from "./classes/training.js";
 import { Person } from "./classes/person.js";
 import { Teacher } from './classes/teacher.js';
-import { Student } from "./classes/Student.js";
+import { Student } from "./classes/student.js";
 
 const t1 = new Training("Long run", 21, "2023-04-27");
 console.log(t1); //Training {type: 'Long run', distance: 21, date: '2023-04-27', comments: ''}
