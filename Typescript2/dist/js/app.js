@@ -1,4 +1,12 @@
-console.log('modules');
-import { Training } from './classes/training.js';
-const t1 = new Training('Long run', 21, '2023-04-27');
+console.log("modules");
+import { Training } from "./classes/training.js";
+import { Teacher } from './classes/teacher.js';
+import { Student } from './classes/student.js';
+const t1 = new Training("Long run", 21, "2023-04-27");
 console.log(t1);
+const s1 = new Student("Valeria", "Medina", 4.5);
+console.log(s1);
+console.log(s1.getFullName());
+const teacher1 = new Teacher('Liliana', 'Ramirez', '007');
+console.log(teacher1);
+console.log(teacher1.getFullName());
