@@ -38,7 +38,7 @@ go live index.html
     
 
 configurar transpilador
-    tsc --init*********************************************
+    tsc --init************
     me crea un tsconfig.json
      habilito
      "rootDir": "./src/ts", 
@@ -47,7 +47,7 @@ configurar transpilador
      "noEmitOnError": true, 
      terminal   
      ***************
-     tsc --watch
+     tsc --watch***************
      y trabajo en ts/app.ts
      ***************
 este ultimo esta pendiente de los cambios del ts para pasarlos automaticamente a js
@@ -78,3 +78,10 @@ en
         "module": "ES6",  
         "target": "es2016",         
 ***
+//clases PascalCase
+//variables, metodos: camelCase
+//Snake_case en python
+1- no empieza con numero
+2- incluir letras y numeros
+3- no incluye espacios
+4- Incluye _ o $
