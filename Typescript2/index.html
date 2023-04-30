@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TypeScript Modules</title>
-<link rel="stylesheet" href="dist/css/style.css">
-<!--
-
+    <link rel="stylesheet" href="dist/css/style.css">
+    <!--
+<script src="dist/js/index.js" type="module" defer></script>
 -->
 
 
-<script src="dist/js/index.js" type="module" defer></script>
+    <script src="dist/js/proyectoTraining/app.js" type="module" defer></script>
 
 
 </head>
+
 <body>
     <h1>TypeScript</h1>
+    <h2>Training Manager</h2>
+    <a class="clase" href="https://www.udistrital.edu.co">Ir al inicio</a>
+    <form action="">
+        <fieldset>
+            <label for="inputDate">Date:</label>
+            <input type="date" id="inputDate">
+        </fieldset>
+        <fieldset>
+            <label for="selectType">Type:</label>
+            <select id="selectType">
+                <option value="1">Training run</option>
+                <option value="2"> Intervals</option>
+                <option value="3">Long run</option>
+            </select>
+
+        </fieldset>
+        <fieldset>
+            <label for="inputDistance">Distance:</label>
+            <input type="number" id="inputDistance">
+        </fieldset>
+        <fieldset>
+            <button>Add</button>
+        </fieldset>
+    </form>
+
+    <h2>Training list</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Distance</th>
+            </tr>
+        </thead>
+        <tbody>
+           <!-- <tr>
+                <td>2023-04-08</td>
+                <td>Long Run</td>
+                <td>21k</td>
+            </tr>
+            <tr>
+                <td>2023-04-09</td>
+                <td>Trainig Run</td>
+                <td>8k</td>
+            </tr>
+            <tr>
+                <td>2023-04-10</td>
+                <td>Intervals</td>
+                <td>5k</td>
+            </tr>-->
+        </tbody>
+    </table>
 </body>
+
 </html>
