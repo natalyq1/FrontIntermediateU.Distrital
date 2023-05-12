@@ -1,6 +1,7 @@
 import {  Fragment } from "react"
 import Header from "./Components/Header/Header";
 import Opcion from "./Components/Opcion/Opcion";
+import Tareas from "./Components/Tareas/Tareas";
 //funcion que retorna algo
 function App() {
   //variables
@@ -24,6 +25,9 @@ function App() {
     <Opcion texto= 'Products' link='/products'/>
     <Opcion texto= 'Services' link='/services'/>
     <Opcion />
+
+    <hr />
+    <Tareas />
     </Fragment>
   )
 }
