@@ -8,11 +8,11 @@ const Tareas = () => {
     ]
 
   return (
-    <>
+    <ul>
     {listaTareas.map( tarea => (
-        <h4 key={tarea.id}> { tarea.titulo }</h4>
+        <li key={tarea.id}> { tarea.titulo }</li>
     ))}
-    </>
+    </ul>
   )
 }
 export default Tareas
