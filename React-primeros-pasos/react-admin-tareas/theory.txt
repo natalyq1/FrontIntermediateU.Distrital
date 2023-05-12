@@ -1,0 +1,71 @@
+node -v
+npm - v
+npm init vite@latest nombre
+O puedo usar npm init vite@latest nombre-proyecto -- --template react y hace lo mismo
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+cd nombre
+npm install
+npm run dev
+
+
+funciona como prettier=
+ESLint statically analyzes your code to quickly find problems. It is built into most text editors and you can run ESLint as part of your continuous integration pipeline.
+
+REACT---> son funciones q retornan un resultado
+---> requieren que se renderise una solo etiqueta o fragmento y adentro mis demás etiquetas
+<Fragment></Fragment>
+<> </>
+
+--> hay componentes basados en funciones y en clases
+
+import { Component} from 'react';
+export default class App extends Component {
+    render() {
+        return <h1>React based on class</h1>
+    }
+}
+
+Extension ES7+React/Redux/React-Native-snippets
+----> arrow function con 
+rafce
+const Header = () => {
+    return (
+      <div>Header</div>
+    )
+  }
+
+rafc
+  export const Header = () => {
+    return (
+      <div>Header</div>
+    )
+  }
+
+
+  PROPS
+  import Opcion from "./Components/Opcion/Opcion";
+  <Opcion texto= 'Home'/>
+    <Opcion texto= 'Products'/>
+    <Opcion texto= 'Services'/>
+
+    En Opcion.jsx
+    const Opcion = (props) => {
+        console.log(props.texto);
+      return (
+        <div>{props.texto}</div>
+      )
+    }
+    Opcion.defaultProps = {
+        texto: 'ninguna'
+    }
+    export default Opcion
+
+    o desestructurado
+
+    const Opcion = ({texto, link}) => {
+        console.log(texto);
+      return (
+        <a href={link}>{texto}</a>
+      )
+    }
