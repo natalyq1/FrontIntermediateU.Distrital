@@ -2,6 +2,7 @@ import {  Fragment } from "react"
 import Header from "./Components/Header/Header";
 import Opcion from "./Components/Opcion/Opcion";
 import Tareas from "./Components/Tareas/Tareas";
+import Boton from "./Components/Boton/Boton";
 //funcion que retorna algo
 function App() {
   //variables
@@ -27,6 +28,9 @@ function App() {
     <Opcion />
 
     <Tareas />
+    <Boton texto='boton 1' color= 'rose' />
+    <Boton texto='boton 2' color= 'green'/>
+    <Boton texto='boton 3' color= 'blue'/>
     </Fragment>
   )
 }
