@@ -1,8 +1,8 @@
-
+import './Header.css'
 const Header = () => {
   return (
     <div>
-        <header>Incrustando un componente dentro de otro</header>
+        <header className="header">Administrador de tareas</header>
     </div>
   )
 }

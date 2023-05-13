@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-
+import './Opcion.css'
 const Opcion = ({texto, link}) => {
     console.log(texto);
   return (
-    <a href={link}>{texto}</a>
+    <a className="opcion" href={link}>{texto}</a>
   )
 }
 Opcion.defaultProps = {

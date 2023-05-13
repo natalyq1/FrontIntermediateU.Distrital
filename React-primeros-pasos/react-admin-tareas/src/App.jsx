@@ -26,7 +26,6 @@ function App() {
     <Opcion texto= 'Services' link='/services'/>
     <Opcion />
 
-    <hr />
     <Tareas />
     </Fragment>
   )
