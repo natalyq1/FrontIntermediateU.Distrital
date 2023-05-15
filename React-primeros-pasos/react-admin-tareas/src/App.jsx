@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import Opcion from "./Components/Opcion/Opcion";
 import Tareas from "./Components/Tareas/Tareas";
 import Boton from "./Components/Boton/Boton";
+import './styles/style.scss'
 //funcion que retorna algo
 function App() {
   //variables
@@ -31,6 +32,11 @@ function App() {
     <Boton texto='boton 1' color= 'rose' />
     <Boton texto='boton 2' color= 'green'/>
     <Boton texto='boton 3' color= 'blue'/>
+    <ul className="countries">
+      <li>Colombia</li>
+      <li>Argentina</li>
+      <li>Chile</li>
+    </ul>
     </Fragment>
   )
 }

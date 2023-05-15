@@ -8,6 +8,10 @@ cd nombre
 npm install
 npm run dev
 
+npm install sass -D
+
+VITE-configuracion y empaquetador
+
 
 funciona como prettier=
 ESLint statically analyzes your code to quickly find problems. It is built into most text editors and you can run ESLint as part of your continuous integration pipeline.
