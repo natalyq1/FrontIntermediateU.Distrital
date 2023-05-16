@@ -13,7 +13,7 @@ import './styles/style.scss'
 
 function AppTareas() {
   //estado del componente
-  const [ tareas, setTareas] = useState  ([
+  const [ tareas] = useState  ([
     { id: 1, titulo: 'Running' },
       { id: 2, titulo: 'Programming' },
       { id: 3, titulo: 'Reading' },

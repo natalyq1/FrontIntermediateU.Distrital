@@ -15,6 +15,10 @@ npm install prop-types
 para que lea los tipos de datos o acepte los q son por default
 validacion para las propiedades con libreria prop-types
 
+npm install react-icons
+
+
+
 VITE-configuracion y empaquetador
 
 

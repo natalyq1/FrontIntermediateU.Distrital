@@ -10,7 +10,7 @@ const Tareas = ({tareas}) => {
             {/* OBJETOS CON ESTILO INLINE */}
             <h2 style={{ color: 'red', background: 'pink' }}>Listado de tareas</h2>
            
-            <ul>
+            <ul className='tareas'>
                 {tareas.map(tarea => (
                     <Tarea key={tarea.id} tarea={tarea} />
                 ))}
