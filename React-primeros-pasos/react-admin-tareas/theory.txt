@@ -9,6 +9,11 @@ npm install
 npm run dev
 
 npm install sass -D
+//Con esto ya puedo escribir estilos sin necesidad de que compile a css, ya que vite es compatible y lee sass con los .scss
+
+npm install prop-types
+para que lea los tipos de datos o acepte los q son por default
+validacion para las propiedades con libreria prop-types
 
 VITE-configuracion y empaquetador
 
