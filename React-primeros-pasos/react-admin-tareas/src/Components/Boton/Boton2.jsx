@@ -1,12 +1,13 @@
+import PropTypes from 'prop-types'
 
-const Boton2 = () => {
-const clickHandler = (event) => {
-    console.log('hicieron clic', event);
-}
+const Boton2 = ({onClickOnButton}) => {
 
   return (
-    <button onClick={clickHandler}>Cilc here</button>
+    <button onClick={onClickOnButton}>Cilc here</button>
   )
+}
+Boton2.propTypes = {
+    onClickOnButton: PropTypes.func,
 }
 
 export default Boton2
