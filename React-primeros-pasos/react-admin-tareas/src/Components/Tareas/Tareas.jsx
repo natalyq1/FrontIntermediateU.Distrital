@@ -1,15 +1,7 @@
 import PropTypes from 'prop-types';
+import Tarea from './Tarea';
 
 const Tareas = ({tareas}) => {
-//estado del componente
-
-    // Hook state
-    //const [edad, setEdad] = useState(0)
-    //estado es inmutable
-    //edad = 7;
-    //modifica el estado a través de la funcion set
-    //setEdad(3)
-
     //{Expresion}
     return (
         <>
@@ -20,7 +12,7 @@ const Tareas = ({tareas}) => {
            
             <ul>
                 {tareas.map(tarea => (
-                    <li className="tarea" key={tarea.id}> {tarea.titulo}</li>
+                    <Tarea key={tarea.id} tarea={tarea} />
                 ))}
             </ul>
         </>
