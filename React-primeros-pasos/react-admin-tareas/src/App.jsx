@@ -4,13 +4,16 @@ import Opcion from "./Components/Opcion/Opcion";
 import Tareas from "./Components/Tareas/Tareas";
 import Boton from "./Components/Boton/Boton";
 import './styles/style.scss'
+import Boton2 from "./Components/Boton/Boton2";
 //funcion que retorna algo
 function App() {
   //variables
   const nombre = 'Catalina';
   const edad = 21;
-
-  return (
+  const clickHandler =() => {
+    console.log('clic en padre');
+}  
+return (
     <Fragment>
    
       <div>Frontend Intermedio</div>
@@ -32,6 +35,7 @@ function App() {
     <Boton texto='boton 1' color= 'rose' />
     <Boton texto='boton 2' color= 'green'/>
     <Boton texto='boton 3' color= 'blue'/>
+    <Boton2 onClickOnButton={clickHandler} />
     <ul className="countries">
       <li>Colombia</li>
       <li>Argentina</li>
@@ -40,5 +44,6 @@ function App() {
     </Fragment>
   )
 }
+
 
 export default App
