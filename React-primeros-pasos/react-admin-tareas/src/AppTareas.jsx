@@ -14,10 +14,10 @@ import './styles/style.scss'
 function AppTareas() {
   //estado del componente inmutable
   const [ tareas, setTareas] = useState  ([
-    { id: 1, titulo: 'Running' },
-      { id: 2, titulo: 'Programming' },
-      { id: 3, titulo: 'Reading' },
-      { id: 4, titulo: 'Writing' },  
+    { id: 1, titulo: 'Running', terminada: false },
+      { id: 2, titulo: 'Programming', terminada: true },
+      { id: 3, titulo: 'Reading', terminada: false },
+      { id: 4, titulo: 'Writing', terminada: true },  
   ])
   const eliminarTarea = (id) =>{
     //tareasActuales ---> representa el estado actual

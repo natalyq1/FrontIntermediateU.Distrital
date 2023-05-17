@@ -6,15 +6,27 @@ ul.countries{
         color: v.$color-letra;
     }
 }
-ul.tareas{
+ul.tareas {
     list-style-type: none;
-    li{
-        border: 1px solid #393939;
-        padding: 5px 10px;
-        margin: 5px;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    li {
+      border: 1px solid #393939;
+      padding: 5px 10px;
+      margin: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .icono {
+        color: #cf00b3;
+        font-size: 0.8rem;
+        cursor: pointer;
+  
+        &:hover {
+          color: #ff0cdf;
+        }
+      }
     }
-}
+    .terminada{
+        background: rgb(57, 88, 57);
+      }
+  }
