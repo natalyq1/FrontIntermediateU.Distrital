@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Tarea from './Tarea';
 
-const Tareas = ({tareas, onDelete}) => {
+const Tareas = ({tareas, onDelete, onToggle}) => {
 
     //{Expresion}
     return (
@@ -18,6 +18,7 @@ const Tareas = ({tareas, onDelete}) => {
                     key={tarea.id} 
                     tarea={tarea} 
                     onDelete={onDelete}
+                    onToggle= {onToggle}
                     />
                 ))}
             </ul>
@@ -29,6 +30,7 @@ const Tareas = ({tareas, onDelete}) => {
 Tareas.propTypes = {
     tareas: PropTypes.array,
     onDelete: PropTypes.func,
+    onToggle: PropTypes.func,
 }
 
 export default Tareas

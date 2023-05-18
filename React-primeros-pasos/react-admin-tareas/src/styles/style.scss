@@ -15,6 +15,7 @@ ul.tareas {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      cursor: pointer;
   
       .icono {
         color: #cf00b3;

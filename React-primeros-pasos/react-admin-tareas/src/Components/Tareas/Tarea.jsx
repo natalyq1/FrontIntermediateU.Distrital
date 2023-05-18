@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import { FaTrash } from 'react-icons/fa'
 
-const Tarea = ({tarea, onDelete}) => {
+const Tarea = ({tarea, onDelete, onToggle}) => { //toggle
   
   return (
-    <li className={tarea.terminada && 'terminada'}> 
+    <li 
+    className={tarea.terminada && 'terminada'}
+    onDoubleClick={ () => onToggle(tarea.id)}
+    > 
       {tarea.titulo}
     <FaTrash 
     className='icono'
@@ -17,6 +20,7 @@ const Tarea = ({tarea, onDelete}) => {
 Tarea.propTypes = {
     tarea: PropTypes.object,
     onDelete: PropTypes.func,
+    onToggle: PropTypes.func,
 }
 
 
