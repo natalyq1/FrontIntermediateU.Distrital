@@ -17,6 +17,8 @@ validacion para las propiedades con libreria prop-types
 
 npm install react-icons
 
+npm install uuid
+
 
 
 VITE-configuracion y empaquetador

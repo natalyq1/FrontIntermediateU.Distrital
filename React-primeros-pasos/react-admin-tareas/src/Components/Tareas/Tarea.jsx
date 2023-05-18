@@ -5,7 +5,7 @@ const Tarea = ({tarea, onDelete, onToggle}) => { //toggle
   
   return (
     <li 
-    className={tarea.terminada && 'terminada'}
+    className={tarea.terminada ? 'terminada': ''}
     onDoubleClick={ () => onToggle(tarea.id)}
     > 
       {tarea.titulo}
@@ -22,6 +22,5 @@ Tarea.propTypes = {
     onDelete: PropTypes.func,
     onToggle: PropTypes.func,
 }
-
 
 export default Tarea

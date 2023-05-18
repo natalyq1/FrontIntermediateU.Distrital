@@ -15,7 +15,9 @@ function App() {
 }  
 return (
     <Fragment>
-   
+      
+            {/* OBJETOS CON ESTILO INLINE */}
+    <h2 style={{ color: 'red', background: 'pink' }}>Listado de tareas</h2>
       <div>Frontend Intermedio</div>
       <h1>Lenguajes</h1>
       <ul>

@@ -10,15 +10,15 @@ import Tareas from "./Components/Tareas/Tareas";
 
 //Importar SCSS
 import './styles/style.scss'
+import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
 
 function AppTareas() {
   //estado del componente inmutable
-  const [tareas, setTareas] = useState([
-    { id: 1, titulo: 'Running', terminada: false },
-    { id: 2, titulo: 'Programming', terminada: true },
-    { id: 3, titulo: 'Reading', terminada: false },
-    { id: 4, titulo: 'Writing', terminada: true },
-  ])
+  const [tareas, setTareas] = useState([])
+
+const agregarTarea = (tarea) => {
+  setTareas([...tareas, tarea])
+}
 
   const toggleTerminada = (id) => {
     //tareasActuales representa el estado actual
@@ -26,7 +26,7 @@ function AppTareas() {
       //Recorre las tareas actuales para retornar vcada tarea
       return tareasActuales.map(tarea =>
         //verifica si la tarea tiene el mismo id
-        tarea.id === id ? {...tarea, terminada: !tarea.terminada} : tarea)
+        tarea.id === id ? { ...tarea, terminada: !tarea.terminada } : tarea)
     })
   }
 
@@ -43,6 +43,9 @@ function AppTareas() {
 
       <Header titulo='Administrador de tareas' />
 
+      <AgregarTareaForm 
+      onAddTask={agregarTarea}
+      />
       <Tareas
         tareas={tareas}
         onDelete={eliminarTarea}

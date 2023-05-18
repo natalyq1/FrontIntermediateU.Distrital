@@ -31,3 +31,16 @@ ul.tareas {
         background: rgb(57, 88, 57);
       }
   }
+
+  form{
+    fieldset{
+        border: none;
+
+        input[type='submit'] {
+            cursor: pointer;
+        }
+        button{
+            margin-left: 2em;
+        }
+    }
+  }
