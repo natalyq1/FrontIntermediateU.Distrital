@@ -1,0 +1,42 @@
+npm init -y
+npm i json-server
+
+extension gitignore
+ctrl+shift+p
+gitignore-->add
+node---> clic
+lo crea
+
+creo db.json, simulo datos en el archivo
+
+en package json booro:
+"test": "echo \"Error: no test specified\" && exit 1"
+y pongo:
+
+"start": "json-server --watch db.json"
+
+***************
+npm start
+***************
+
+en consola-gitbash
+curl http://localhost:3000/tareas
+rta:
+[
+  {
+    "titulo": "Swimming",
+    "terminada": false
+  }
+]
+
+-----
+extension REST client
+en mi proyecto donde necesitoesa bd
+creo un folder con un archivo 
+http
+    tareas.http
+
+    ## Obtener todas las tareas
+GET http://localhost:3000/tareas/
+
+y ahi me saldra un boton de send request y me traera los datos

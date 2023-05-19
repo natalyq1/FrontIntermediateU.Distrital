@@ -1,0 +1,27 @@
+## Obtener todas las tareas
+GET http://localhost:3000/tareas/
+
+### Obtener una tareas
+GET http://localhost:3000/tareas/2
+
+### Obtener una tareas
+POST http://localhost:3000/tareas/
+Content-Type: application/json
+
+{
+  "titulo": "Reading",
+  "terminada": false
+}
+
+### Modificar una tareas
+PATCH http://localhost:3000/tareas/1
+Content-Type: application/json
+
+{
+  "titulo": "Jogging",
+  "terminada": true
+}
+
+### Borrar una tareas
+DELETE http://localhost:3000/tareas/5
+Content-Type: application/json

@@ -1,0 +1,24 @@
+{
+  "tareas": [
+    {
+      "id": 2,
+      "titulo": "Programming",
+      "terminada": true
+    },
+    {
+      "id": 3,
+      "titulo": "Swimming",
+      "terminada": false
+    },
+    {
+      "titulo": "Watch a movie",
+      "terminada": true,
+      "id": 4
+    },
+    {
+      "titulo": "Reading",
+      "terminada": false,
+      "id": 6
+    }
+  ]
+}
