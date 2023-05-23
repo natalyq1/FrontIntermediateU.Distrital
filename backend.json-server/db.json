@@ -19,6 +19,16 @@
       "titulo": "Reading",
       "terminada": false,
       "id": 6
+    },
+    {
+      "titulo": "Parctice singing",
+      "terminada": false,
+      "id": 7
+    },
+    {
+      "titulo": "Remove tasks",
+      "terminada": false,
+      "id": 8
     }
   ]
 }

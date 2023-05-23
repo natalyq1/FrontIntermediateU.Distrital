@@ -11,7 +11,7 @@ import Tareas from "./Components/Tareas/Tareas";
 //Importar SCSS
 import './styles/style.scss'
 import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
-import { obtenerTareasAPI } from "./api/tareasApi";
+import { agregarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
 import Error from "./Components/Tareas/Error/Error";
 
 function AppTareas() {
@@ -24,9 +24,10 @@ function AppTareas() {
   useEffect(() => {
     const obtenerTareas = async () => {
       //aca se hace la conexion con la API
-        const data = await obtenerTareasAPI()
-        if (data) {
-          setTareas(data)
+        const tareas = await obtenerTareasAPI()
+        if (tareas) {
+          setTareas(tareas)
+          setError(false)
         } else {
           setTareas([])
           setError(true)
@@ -38,8 +39,9 @@ function AppTareas() {
     obtenerTareas()
   }, [])
 
-  const agregarTarea = (tarea) => {
-    setTareas([...tareas, tarea])
+  const agregarTarea = async (tarea) => {
+    const nuevaTarea = await agregarTareaAPI(tarea)
+    setTareas([...tareas, nuevaTarea])
   }
 
   const toggleTerminada = (id) => {
