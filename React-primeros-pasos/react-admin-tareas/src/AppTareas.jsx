@@ -12,18 +12,25 @@ import Tareas from "./Components/Tareas/Tareas";
 import './styles/style.scss'
 import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
 import { obtenerTareasAPI } from "./api/tareasApi";
+import Error from "./Components/Tareas/Error/Error";
 
 function AppTareas() {
   //estado del componente inmutable
   const [tareas, setTareas] = useState([])
+  const [error, setError] = useState(false)
+
 
   //HOOK q ejecuta codigo al crear el componente--inner function
   useEffect(() => {
     const obtenerTareas = async () => {
       //aca se hace la conexion con la API
         const data = await obtenerTareasAPI()
-        setTareas(data)
-      
+        if (data) {
+          setTareas(data)
+        } else {
+          setTareas([])
+          setError(true)
+        }     
     }
     //obteniendo datos con AXIOS
 
@@ -61,6 +68,7 @@ function AppTareas() {
       <AgregarTareaForm
         onAddTask={agregarTarea}
       />
+      {error && <Error mensaje='Hubo un error al obtener las tareas' />}
       <Tareas
         tareas={tareas}
         onDelete={eliminarTarea}
