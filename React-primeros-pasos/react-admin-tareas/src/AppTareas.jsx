@@ -1,7 +1,8 @@
 //Librerias de React
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 //Librerías externas
+import axios from 'axios'
 
 //Componentes propios
 import { Fragment } from "react"
@@ -16,9 +17,29 @@ function AppTareas() {
   //estado del componente inmutable
   const [tareas, setTareas] = useState([])
 
-const agregarTarea = (tarea) => {
-  setTareas([...tareas, tarea])
-}
+  //HOOK q ejecuta codigo al crear el componente--inner function
+  useEffect(() => {
+    const obtenerTareas = async () => {
+      //si no hay conexion agarre el error TRY-CATCH
+      try {
+        const respuesta = await axios.get('http://localhost:3000/tareas')
+        if (respuesta.status === 200) {
+          setTareas(respuesta.data);
+        }
+      }
+      catch (error) {
+        console.error('Hubo un error al obtener las tareas');
+      }
+    }
+    //obteniendo datos con AXIOS
+
+    //obtiene las tareas del backend
+    obtenerTareas()
+  }, [])
+
+  const agregarTarea = (tarea) => {
+    setTareas([...tareas, tarea])
+  }
 
   const toggleTerminada = (id) => {
     //tareasActuales representa el estado actual
@@ -43,8 +64,8 @@ const agregarTarea = (tarea) => {
 
       <Header titulo='Administrador de tareas' />
 
-      <AgregarTareaForm 
-      onAddTask={agregarTarea}
+      <AgregarTareaForm
+        onAddTask={agregarTarea}
       />
       <Tareas
         tareas={tareas}

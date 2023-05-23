@@ -32,7 +32,7 @@ const AgregarTareaForm = ({ onAddTask }) => {
         setTitulo('')
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autoComplete="off">
       <fieldset>
         <label htmlFor="titulo">Titulo: </label>
         <input

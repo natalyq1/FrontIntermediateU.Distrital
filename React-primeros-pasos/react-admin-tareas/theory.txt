@@ -19,6 +19,8 @@ npm install react-icons
 
 npm install uuid
 
+npm install axios
+
 
 
 VITE-configuracion y empaquetador
@@ -84,3 +86,7 @@ rafc
         <a href={link}>{texto}</a>
       )
     }
+
+BACKEND
+    CRuD-Create READ Update Delete
+    Axios

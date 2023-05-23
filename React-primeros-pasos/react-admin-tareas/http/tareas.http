@@ -24,4 +24,3 @@ Content-Type: application/json
 
 ### Borrar una tareas
 DELETE http://localhost:3000/tareas/5
-Content-Type: application/json
