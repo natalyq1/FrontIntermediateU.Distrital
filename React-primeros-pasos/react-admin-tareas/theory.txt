@@ -21,6 +21,8 @@ npm install uuid
 
 npm install axios
 
+npm uninstall uuid
+
 
 
 VITE-configuracion y empaquetador
