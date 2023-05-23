@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react"
 
 //Librerías externas
-import axios from 'axios'
 
 //Componentes propios
 import { Fragment } from "react"
@@ -12,6 +11,7 @@ import Tareas from "./Components/Tareas/Tareas";
 //Importar SCSS
 import './styles/style.scss'
 import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
+import { obtenerTareasAPI } from "./api/tareasApi";
 
 function AppTareas() {
   //estado del componente inmutable
@@ -20,16 +20,10 @@ function AppTareas() {
   //HOOK q ejecuta codigo al crear el componente--inner function
   useEffect(() => {
     const obtenerTareas = async () => {
-      //si no hay conexion agarre el error TRY-CATCH
-      try {
-        const respuesta = await axios.get('http://localhost:3000/tareas')
-        if (respuesta.status === 200) {
-          setTareas(respuesta.data);
-        }
-      }
-      catch (error) {
-        console.error('Hubo un error al obtener las tareas');
-      }
+      //aca se hace la conexion con la API
+        const data = await obtenerTareasAPI()
+        setTareas(data)
+      
     }
     //obteniendo datos con AXIOS
 
