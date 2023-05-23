@@ -1,11 +1,6 @@
 {
   "tareas": [
     {
-      "id": 2,
-      "titulo": "Programming",
-      "terminada": true
-    },
-    {
       "id": 3,
       "titulo": "Swimming",
       "terminada": false
@@ -29,11 +24,6 @@
       "titulo": "Remove tasks",
       "terminada": false,
       "id": 8
-    },
-    {
-      "titulo": "Plant a tree",
-      "terminada": false,
-      "id": 9
     }
   ]
 }

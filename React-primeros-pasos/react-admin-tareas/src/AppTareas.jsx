@@ -11,7 +11,7 @@ import Tareas from "./Components/Tareas/Tareas";
 //Importar SCSS
 import './styles/style.scss'
 import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
-import { agregarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
+import { agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
 import Error from "./Components/Tareas/Error/Error";
 
 function AppTareas() {
@@ -24,14 +24,14 @@ function AppTareas() {
   useEffect(() => {
     const obtenerTareas = async () => {
       //aca se hace la conexion con la API
-        const tareas = await obtenerTareasAPI()
-        if (tareas) {
-          setTareas(tareas)
-          setError(false)
-        } else {
-          setTareas([])
-          setError(true)
-        }     
+      const tareas = await obtenerTareasAPI()
+      if (tareas) {
+        setTareas(tareas)
+        setError(false)
+      } else {
+        setTareas([])
+        setError(true)
+      }
     }
     //obteniendo datos con AXIOS
 
@@ -41,6 +41,7 @@ function AppTareas() {
 
   const agregarTarea = async (tarea) => {
     const nuevaTarea = await agregarTareaAPI(tarea)
+    // Agrega la tarea al backend
     setTareas([...tareas, nuevaTarea])
   }
 
@@ -54,12 +55,17 @@ function AppTareas() {
     })
   }
 
-  const eliminarTarea = (id) => {
-    //tareasActuales ---> representa el estado actual
-    setTareas(tareasActuales => {
-      //Filtra las tareas sin la tarea con el id recibido
-      return tareasActuales.filter(tareas => tareas.id != id)
-    })
+  const eliminarTarea = async (id) => {
+    //elimina la tarea del backend
+    const respuesta = await eliminarTareaAPI(id)
+    //verifica que la eliminacion de la tarea haya sido exitosa
+    if (respuesta) {
+      //tareasActuales ---> representa el estado actual
+      setTareas(tareasActuales => {
+        //Filtra las tareas sin la tarea con el id recibido
+        return tareasActuales.filter(tareas => tareas.id != id)
+      })
+    }
   }
 
   return (
