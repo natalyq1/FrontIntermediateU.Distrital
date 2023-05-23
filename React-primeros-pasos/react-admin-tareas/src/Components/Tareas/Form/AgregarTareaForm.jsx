@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 //import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 
@@ -6,6 +6,20 @@ import PropTypes from 'prop-types';
 const AgregarTareaForm = ({ onAddTask }) => {
     //Estado del form
     const [titulo, setTitulo] = useState('')
+    const [longitud, setLongitud] = useState(0);
+
+    useEffect(() => {
+      console.log("Acaba de ser renderizado!");
+    });
+  
+    useEffect(() => {
+      console.log("Solo se ejecuta al montar el componente");
+    }, []);
+  
+    useEffect(() => {
+      console.log("Se ejecuta cuando cambia la variable 'titulo'");
+      setLongitud(titulo.length);
+    }, [titulo]);
 
     const limpiarFormulario = (event) => {
         event.preventDefault()
@@ -42,6 +56,7 @@ const AgregarTareaForm = ({ onAddTask }) => {
           onChange={(event) => setTitulo(event.target.value)}
         />
       </fieldset>
+      <p> <small>Caracteres digitados: {longitud}</small></p>
       <fieldset>
         <input type="submit" value="Agregar" />
         <button onClick={limpiarFormulario}>Reset</button>
