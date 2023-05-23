@@ -1,19 +1,9 @@
 {
   "tareas": [
     {
-      "id": 3,
-      "titulo": "Swimming",
-      "terminada": false
-    },
-    {
       "titulo": "Watch a movie",
       "terminada": true,
       "id": 4
-    },
-    {
-      "titulo": "Reading",
-      "terminada": false,
-      "id": 6
     },
     {
       "titulo": "Parctice singing",
@@ -24,6 +14,16 @@
       "titulo": "Remove tasks",
       "terminada": false,
       "id": 8
+    },
+    {
+      "titulo": "Origin ideas",
+      "terminada": false,
+      "id": 9
+    },
+    {
+      "titulo": "Reset computer",
+      "terminada": false,
+      "id": 10
     }
   ]
 }

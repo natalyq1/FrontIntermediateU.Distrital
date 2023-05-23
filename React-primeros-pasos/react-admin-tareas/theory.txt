@@ -92,3 +92,12 @@ rafc
 BACKEND
     CRuD-Create READ Update Delete
     Axios
+
+
+HOOKS
+funciones q permiten alterar o extender el comportameinto de los componentes---> solo para componentes de funciona **debe ser estilo function** no const que es para clases**
+ej: 
+    useState : Permite almacenar, leer y modificar los datos locales de un componente. Los datos son el estado del componente.
+    useEffect : Extienden la funcionalidad de los métodos del ciclo de vida de los componentes
+    useContext : Permite acceder a datos globales de aplicación desde cualquier componente sin tener que pasar datos mediante props
+    useReducer : Permite reducir la complejidad manteniendo la lógica en un solo lugar de fácil acceso

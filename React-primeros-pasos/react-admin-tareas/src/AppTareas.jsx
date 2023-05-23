@@ -14,7 +14,7 @@ import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
 import { agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
 import Error from "./Components/Tareas/Error/Error";
 
-function AppTareas() {
+const AppTareas = () => {
   //estado del componente inmutable
   const [tareas, setTareas] = useState([])
   const [error, setError] = useState(false)
