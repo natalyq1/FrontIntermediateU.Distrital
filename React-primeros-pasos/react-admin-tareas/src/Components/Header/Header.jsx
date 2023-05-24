@@ -5,10 +5,10 @@ import './Header.css'
 import { useContext } from 'react';
 import LocalizationContext from '../../context/LocalizationContext';
 const Header = () => {
-  const local = useContext(LocalizationContext)
+  const { language } = useContext(LocalizationContext)
   return (
     <div>
-        <header className="header">{local.header}</header>
+        <header className="header">{language.header}</header>
     </div>
   )
 }

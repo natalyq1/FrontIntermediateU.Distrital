@@ -11,27 +11,12 @@ import Tareas from "./Components/Tareas/Tareas";
 //Importar SCSS
 import './styles/style.scss'
 import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
-import { agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
+import { actualizarTareaAPI, agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
 import Error from "./Components/Tareas/Error/Error";
 import LocalizationContext from "./context/LocalizationContext";
 import SelectLanguage from "./Components/Tareas/SelectLanguage";
+import local from "./context/ContextData";
 
-const local = {
-  es: {
-    header: 'Administrador de tareas',
-    title: 'Título',
-    add: 'Agregar',
-    reset: 'Limpiar',
-    characters: 'Caracteres',
-  },
-  en: {
-    header: 'Task manager',
-    title: 'Title',
-    add: 'Add',
-    reset: 'Reset',
-    characters: 'Characters',
-  }
-}
 
 const AppTareas = () => {
   //estado del componente inmutable
@@ -65,14 +50,18 @@ const AppTareas = () => {
     setTareas([...tareas, nuevaTarea])
   }
 
-  const toggleTerminada = (id) => {
-    //tareasActuales representa el estado actual
-    setTareas(tareasActuales => {
-      //Recorre las tareas actuales para retornar vcada tarea
-      return tareasActuales.map(tarea =>
-        //verifica si la tarea tiene el mismo id
-        tarea.id === id ? { ...tarea, terminada: !tarea.terminada } : tarea)
-    })
+  const toggleTerminada = async (id) => {
+    const respuesta = await actualizarTareaAPI(id)
+
+    if (respuesta) {
+      //tareasActuales representa el estado actual
+      setTareas(tareasActuales => {
+        //Recorre las tareas actuales para retornar cada tarea
+        return tareasActuales.map(tarea =>
+          //verifica si la tarea tiene el mismo id
+          tarea.id === id ? { ...tarea, terminada: !tarea.terminada } : tarea)
+      })
+    }
   }
 
   const eliminarTarea = async (id) => {
@@ -87,30 +76,23 @@ const AppTareas = () => {
       })
     }
   }
-  const handlerLanguageChange = (language) => {
-    if (language === 'es') {
-      setLanguage(local.es)
-    }if (language === 'en'){
-      setLanguage(local.en)
-    }
-  }
 
   return (
     <Fragment>
-      <LocalizationContext.Provider value={language}>
-        <SelectLanguage onLanguageChange={handlerLanguageChange}/>
-      <Header />
+      <LocalizationContext.Provider value={{language, setLanguage}}>
+        <SelectLanguage />
+        <Header />
 
-      <AgregarTareaForm
-        onAddTask={agregarTarea}
-      />
-      {error && <Error mensaje='Hubo un error al obtener las tareas' />}
-      <Tareas
-        tareas={tareas}
-        onDelete={eliminarTarea}
-        onToggle={toggleTerminada}
-      />
-    </LocalizationContext.Provider>
+        <AgregarTareaForm
+          onAddTask={agregarTarea}
+        />
+        {error && <Error mensaje='Hubo un error al obtener las tareas' />}
+        <Tareas
+          tareas={tareas}
+          onDelete={eliminarTarea}
+          onToggle={toggleTerminada}
+        />
+      </LocalizationContext.Provider>
     </Fragment >
   )
 }

@@ -4,7 +4,7 @@ GET http://localhost:3000/tareas/
 ### Obtener una tareas
 GET http://localhost:3000/tareas/2
 
-### Obtener una tareas
+### Agregar una tareas
 POST http://localhost:3000/tareas/
 Content-Type: application/json
 
@@ -14,7 +14,7 @@ Content-Type: application/json
 }
 
 ### Modificar una tareas
-PATCH http://localhost:3000/tareas/1
+PATCH http://localhost:3000/tareas/4
 Content-Type: application/json
 
 {

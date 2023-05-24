@@ -45,7 +45,6 @@ const agregarTareaAPI = async (tarea) => {
  */
 
 const eliminarTareaAPI = async (id) => {
-    console.log(`eliminando tarea ${id} `);
     try {
         const respuesta = await  axios.delete(`${import.meta.env.VITE_BACKEND_URL}${id}`)
         if (respuesta.status === 200) {
@@ -58,4 +57,17 @@ const eliminarTareaAPI = async (id) => {
     }
 }
 
-export { obtenerTareasAPI, agregarTareaAPI, eliminarTareaAPI }
+const actualizarTareaAPI = async (id) => {
+ try {
+    const respuesta = await axios.patch(`${import.meta.env.VITE_BACKEND_URL}${id}`)
+    if (respuesta.status === 200) {
+        return respuesta.data
+    } 
+    return null    
+ } catch (error) {
+    console.error('Hubo un error al actualizar la tarea');
+    return null
+ }
+}
+
+export { obtenerTareasAPI, agregarTareaAPI, eliminarTareaAPI, actualizarTareaAPI }

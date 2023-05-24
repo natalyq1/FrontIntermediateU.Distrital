@@ -10,8 +10,8 @@ const AgregarTareaForm = ({ onAddTask }) => {
     const [longitud, setLongitud] = useState(0);
 
     //accede al context
-    const local = useContext(LocalizationContext)
-    console.log(local);
+    const {language} = useContext(LocalizationContext)
+    console.log(language);
 
     useEffect(() => {
       console.log("Acaba de ser renderizado!");
@@ -53,7 +53,7 @@ const AgregarTareaForm = ({ onAddTask }) => {
     return (
         <form onSubmit={handleSubmit} autoComplete="off">
       <fieldset>
-        <label htmlFor="titulo">{local.title}: </label>
+        <label htmlFor="titulo">{language.title}: </label>
         <input
           type="text"
           id="titulo"
@@ -61,10 +61,10 @@ const AgregarTareaForm = ({ onAddTask }) => {
           onChange={(event) => setTitulo(event.target.value)}
         />
       </fieldset>
-      <p className="caracteres"> <small>{local.characters}: {longitud}</small></p>
+      <p className="caracteres"> <small>{language.characters}: {longitud}</small></p>
       <fieldset>
-        <input type="submit" value={local.add} />
-        <button onClick={limpiarFormulario}>{local.reset}</button>
+        <input type="submit" value={language.add} />
+        <button onClick={limpiarFormulario}>{language.reset}</button>
       </fieldset>
     </form>
     )
