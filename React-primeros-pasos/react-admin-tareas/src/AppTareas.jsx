@@ -13,6 +13,26 @@ import './styles/style.scss'
 import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
 import { agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
 import Error from "./Components/Tareas/Error/Error";
+import LocalizationContext from "./context/LocalizationContext";
+
+const local = {
+  es: {
+    header: 'Administrador de tareas',
+    title: 'Título',
+    add: 'Agregar',
+    reset: 'Limpiar',
+    characters: 'Caracteres',
+  },
+  en: {
+    header: 'Task manager',
+    title: 'Title',
+    add: 'Add',
+    reset: 'Reset',
+    characters: 'Characters',
+  }
+}
+
+
 
 const AppTareas = () => {
   //estado del componente inmutable
@@ -70,7 +90,7 @@ const AppTareas = () => {
 
   return (
     <Fragment>
-
+      <LocalizationContext.Provider value={local.en}>
       <Header titulo='Administrador de tareas' />
 
       <AgregarTareaForm
@@ -82,8 +102,8 @@ const AppTareas = () => {
         onDelete={eliminarTarea}
         onToggle={toggleTerminada}
       />
-
-    </Fragment>
+    </LocalizationContext.Provider>
+    </Fragment >
   )
 }
 

@@ -1,12 +1,17 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 //import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
+import LocalizationContext from "../../../context/LocalizationContext";
 
 
 const AgregarTareaForm = ({ onAddTask }) => {
     //Estado del form
     const [titulo, setTitulo] = useState('')
     const [longitud, setLongitud] = useState(0);
+
+    //accede al context
+    const local = useContext(LocalizationContext)
+    console.log(local);
 
     useEffect(() => {
       console.log("Acaba de ser renderizado!");
@@ -48,7 +53,7 @@ const AgregarTareaForm = ({ onAddTask }) => {
     return (
         <form onSubmit={handleSubmit} autoComplete="off">
       <fieldset>
-        <label htmlFor="titulo">Titulo: </label>
+        <label htmlFor="titulo">{local.title}: </label>
         <input
           type="text"
           id="titulo"
@@ -56,10 +61,10 @@ const AgregarTareaForm = ({ onAddTask }) => {
           onChange={(event) => setTitulo(event.target.value)}
         />
       </fieldset>
-      <p> <small>Caracteres digitados: {longitud}</small></p>
+      <p> <small>{local.characters}: {longitud}</small></p>
       <fieldset>
-        <input type="submit" value="Agregar" />
-        <button onClick={limpiarFormulario}>Reset</button>
+        <input type="submit" value={local.add} />
+        <button onClick={limpiarFormulario}>{local.reset}</button>
       </fieldset>
     </form>
     )
