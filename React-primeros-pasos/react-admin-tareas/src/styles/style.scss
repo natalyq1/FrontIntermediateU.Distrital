@@ -53,3 +53,15 @@ ul.tareas {
     padding: 5px 10px;
     border-radius: 7px;
   }
+  .caracteres{
+    margin: 1em 2em;
+  }
+  .languages{
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+    span{
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }

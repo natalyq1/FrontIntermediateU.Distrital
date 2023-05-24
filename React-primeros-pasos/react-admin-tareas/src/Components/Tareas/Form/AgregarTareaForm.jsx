@@ -61,7 +61,7 @@ const AgregarTareaForm = ({ onAddTask }) => {
           onChange={(event) => setTitulo(event.target.value)}
         />
       </fieldset>
-      <p> <small>{local.characters}: {longitud}</small></p>
+      <p className="caracteres"> <small>{local.characters}: {longitud}</small></p>
       <fieldset>
         <input type="submit" value={local.add} />
         <button onClick={limpiarFormulario}>{local.reset}</button>

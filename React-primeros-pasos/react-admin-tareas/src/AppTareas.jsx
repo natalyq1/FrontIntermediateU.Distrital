@@ -14,6 +14,7 @@ import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
 import { agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
 import Error from "./Components/Tareas/Error/Error";
 import LocalizationContext from "./context/LocalizationContext";
+import SelectLanguage from "./Components/Tareas/SelectLanguage";
 
 const local = {
   es: {
@@ -32,12 +33,11 @@ const local = {
   }
 }
 
-
-
 const AppTareas = () => {
   //estado del componente inmutable
   const [tareas, setTareas] = useState([])
   const [error, setError] = useState(false)
+  const [language, setLanguage] = useState(local.es)
 
 
   //HOOK q ejecuta codigo al crear el componente--inner function
@@ -87,11 +87,19 @@ const AppTareas = () => {
       })
     }
   }
+  const handlerLanguageChange = (language) => {
+    if (language === 'es') {
+      setLanguage(local.es)
+    }if (language === 'en'){
+      setLanguage(local.en)
+    }
+  }
 
   return (
     <Fragment>
-      <LocalizationContext.Provider value={local.en}>
-      <Header titulo='Administrador de tareas' />
+      <LocalizationContext.Provider value={language}>
+        <SelectLanguage onLanguageChange={handlerLanguageChange}/>
+      <Header />
 
       <AgregarTareaForm
         onAddTask={agregarTarea}

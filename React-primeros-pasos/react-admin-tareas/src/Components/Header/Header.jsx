@@ -2,11 +2,13 @@ import PropTypes from 'prop-types';
 
 
 import './Header.css'
-const Header = ({ titulo}) => {
-  
+import { useContext } from 'react';
+import LocalizationContext from '../../context/LocalizationContext';
+const Header = () => {
+  const local = useContext(LocalizationContext)
   return (
     <div>
-        <header className="header">{titulo}</header>
+        <header className="header">{local.header}</header>
     </div>
   )
 }
