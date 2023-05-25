@@ -6,19 +6,9 @@
       "id": 4
     },
     {
-      "titulo": "Remove tasks",
-      "terminada": false,
-      "id": 8
-    },
-    {
       "titulo": "Origin ideas",
       "terminada": false,
       "id": 9
-    },
-    {
-      "titulo": "Reset computer",
-      "terminada": false,
-      "id": 10
     },
     {
       "titulo": "practice running",
@@ -29,6 +19,16 @@
       "titulo": "Reading",
       "terminada": false,
       "id": 12
+    },
+    {
+      "titulo": "Hike a mountain",
+      "terminada": false,
+      "id": 13
+    },
+    {
+      "titulo": "Plant a tree",
+      "terminada": false,
+      "id": 14
     }
   ]
 }

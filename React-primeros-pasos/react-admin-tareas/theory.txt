@@ -101,3 +101,15 @@ ej:
     useEffect : Extienden la funcionalidad de los métodos del ciclo de vida de los componentes
     useContext : Permite acceder a datos globales de aplicación desde cualquier componente sin tener que pasar datos mediante props
     useReducer : Permite reducir la complejidad manteniendo la lógica en un solo lugar de fácil acceso
+
+
+HOOK: USEREDUCER
+
+Permite reducir la complejidad manteniendo la lógica en un solo lugar de fácil acceso
+Los reducers son una alternativa a useState
+
+1. Cambiar la actualización del State por envío (dispatch) de accciones 
+
+2. Crear una función reducer
+
+3. Utilizar el reducer desde el componente
