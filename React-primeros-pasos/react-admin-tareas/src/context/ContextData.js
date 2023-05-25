@@ -14,6 +14,14 @@ const local = {
       add: 'Add',
       reset: 'Reset',
       characters: 'Characters',
+    },
+    fr: {
+      idioma: 'En français',
+      header: 'Le Gestionnaire des tâches',
+      title: 'Titre',
+      add: 'Ajouter',
+      reset: 'Réinitialiser',
+      characters: 'Des letters',
     }
   }
   
