@@ -18,7 +18,7 @@ PATCH http://localhost:3000/tareas/4
 Content-Type: application/json
 
 {
-  "titulo": "Jogging",
+  "titulo": "Exercise",
   "terminada": true
 }
 

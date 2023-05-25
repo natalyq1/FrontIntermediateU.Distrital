@@ -57,9 +57,9 @@ const eliminarTareaAPI = async (id) => {
     }
 }
 
-const actualizarTareaAPI = async (id) => {
+const actualizarTareaAPI = async (id, terminada ) => {
  try {
-    const respuesta = await axios.patch(`${import.meta.env.VITE_BACKEND_URL}${id}`)
+    const respuesta = await axios.patch(`${import.meta.env.VITE_BACKEND_URL}${id}?${terminada}`)
     if (respuesta.status === 200) {
         return respuesta.data
     } 

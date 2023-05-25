@@ -11,7 +11,7 @@ import Tareas from "./Components/Tareas/Tareas";
 //Importar SCSS
 import './styles/style.scss'
 import AgregarTareaForm from "./Components/Tareas/Form/AgregarTareaForm";
-import { agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI } from "./api/tareasApi";
+import { agregarTareaAPI, eliminarTareaAPI, obtenerTareasAPI, actualizarTareaAPI } from "./api/tareasApi";
 import Error from "./Components/Tareas/Error/Error";
 import LocalizationContext from "./context/LocalizationContext";
 import SelectLanguage from "./Components/Tareas/SelectLanguage";
@@ -55,11 +55,14 @@ const [tareas, dispatch] = useReducer(tareasReducer, [])
     dispatch({ type: "AGREGAR", nuevaTarea });
   };
 
-  const toggleTerminada = (id) => {
+  const toggleTerminada = async (id, terminada) => {
     //actualizar la tarea en el Backend
-
+    const respuesta = await actualizarTareaAPI(id, terminada)
     // Modifica el state
-    dispatch({ type: "MODIFICAR", id });
+    if (respuesta) {
+      dispatch({ type: "MODIFICAR", id, terminada });
+    }
+    
   };
 
   const eliminarTarea = async (id) => {
