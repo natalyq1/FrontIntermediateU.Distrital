@@ -8,7 +8,10 @@ const Tarea = ({tarea, onDelete, onToggle}) => { //toggle
     className={tarea.terminada ? 'terminada': ''}
     onDoubleClick={ () => onToggle(tarea.id)}
     > 
-      {tarea.titulo}
+    <div className="texto">
+      <h3>{tarea.titulo}</h3>
+      <p>{tarea.descripcion}</p>
+    </div>
     <FaTrash 
     className='icono'
     onClick={ () => onDelete(tarea.id)}

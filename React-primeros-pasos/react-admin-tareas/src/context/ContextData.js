@@ -6,6 +6,7 @@ const local = {
       add: 'Agregar',
       reset: 'Limpiar',
       characters: 'Caracteres',
+      descripcion: 'Descripción'
     },
     en: {
       idioma: 'In english',
@@ -14,6 +15,7 @@ const local = {
       add: 'Add',
       reset: 'Reset',
       characters: 'Characters',
+      descripcion: 'Description'
     },
     fr: {
       idioma: 'En français',
@@ -22,6 +24,7 @@ const local = {
       add: 'Ajouter',
       reset: 'Réinitialiser',
       characters: 'Des letters',
+      descripcion: 'Commentaires'
     }
   }
   

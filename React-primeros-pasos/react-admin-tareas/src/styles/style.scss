@@ -16,6 +16,12 @@ ul.tareas {
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+
+      .texto{
+        h3, p{
+          margin: 0;
+        }
+      }
   
       .icono {
         color: #cf00b3;

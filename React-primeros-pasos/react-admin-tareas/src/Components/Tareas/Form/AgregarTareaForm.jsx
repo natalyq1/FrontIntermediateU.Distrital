@@ -2,11 +2,15 @@ import { useContext, useEffect, useState } from "react"
 //import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import LocalizationContext from "../../../context/LocalizationContext";
+import useInput from "../../../hooks/useInput";
 
 
 const AgregarTareaForm = ({ onAddTask }) => {
-  //Estado del form
-  const [titulo, setTitulo] = useState('')
+  //Estado del form con CUSTOM HOOK
+  const [titulo, bindTitulo, resetTitulo] = useInput('')
+  const [descripcion, bindDescripcion, resetDescripcion] = useInput('')
+
+  //Estado del form con useState
   const [longitud, setLongitud] = useState(0);
 
   //accede al context
@@ -28,7 +32,8 @@ const AgregarTareaForm = ({ onAddTask }) => {
 
   const limpiarFormulario = (event) => {
     event.preventDefault()
-    setTitulo('')
+    resetTitulo('')
+    resetDescripcion('')
   }
 
   const handleSubmit = (event) => {
@@ -42,13 +47,15 @@ const AgregarTareaForm = ({ onAddTask }) => {
     const nuevaTarea = {
       //id: uuidv4(),
       titulo,
+      descripcion,
       terminada: false
     }
     //Envia la nueva tarea al componente padre
     onAddTask(nuevaTarea)
 
     //modifica el estado del componente
-    setTitulo('')
+    resetTitulo('')
+    resetDescripcion('')
   }
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
@@ -57,11 +64,22 @@ const AgregarTareaForm = ({ onAddTask }) => {
         <input
           type="text"
           id="titulo"
-          value={titulo}
-          onChange={(event) => setTitulo(event.target.value)}
+          {...bindTitulo}
         />
       </fieldset>
+
       <p className="caracteres"> <small>{language.characters}: {longitud}</small></p>
+
+      <fieldset>
+        <label htmlFor="descripcion">{language.descripcion}: </label>
+        <input
+          type="text"
+          id="descripcion"
+          {...bindDescripcion}
+        />
+      </fieldset>
+
+
       <fieldset>
         <input type="submit" value={language.add} />
         <button onClick={limpiarFormulario}>{language.reset}</button>
