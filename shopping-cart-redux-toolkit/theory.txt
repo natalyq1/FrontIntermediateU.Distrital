@@ -1,0 +1,13 @@
+node -v
+npm - v
+npm init vite@latest nombre
+O puedo usar npm init vite@latest nombre-proyecto -- --template react y hace lo mismo
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+cd nombre
+npm install
+npm run dev
+
+npm install @reduxjs/toolkit react-redux
+//redux especifico para react
+
