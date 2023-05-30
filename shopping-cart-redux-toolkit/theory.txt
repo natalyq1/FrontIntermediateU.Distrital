@@ -11,3 +11,11 @@ npm run dev
 npm install @reduxjs/toolkit react-redux
 //redux especifico para react
 
+npm i react-icons
+npm install sass -D
+
+npm i prop-types
+
+
+en el navegador la extensión:
+Redux devtools

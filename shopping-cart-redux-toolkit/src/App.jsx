@@ -1,10 +1,12 @@
+import CartContainer from "./components/cart/CartContainer"
+import NavBar from "./components/navbar/NavBar"
 
 const App = () => {
   
-
   return (
     <>
-      <h1>Nat</h1>
+      <NavBar />
+      <CartContainer />
     </>
   )
 }
