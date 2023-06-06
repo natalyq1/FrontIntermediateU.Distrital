@@ -4,7 +4,7 @@ import cartItems from '../../data/cartItems';
 // Estado inicial
 const initialState = {
     cartItems,
-    amount: 4,
+    amount: 0,
     total: 0,
 }
 
@@ -36,8 +36,20 @@ const cartSlice = createSlice({
             const item = state.cartItems.find((item) => item.id === itemId)
             //decrementa la cantidad
             item.amount--
+        },
+        calculateTotals: (state) => {
+            let totalAmount = 0
+            let totalPrice = 0
+            //Recorre los items del cart
+            state.cartItems.forEach((item) => {
+                totalAmount += item.amount
+                totalPrice += item.amount * item.price
+            })
+            //Modifica el stado
+            state.amount = totalAmount
+            state.total = totalPrice
         }
     }
 })
-export const { clearCart, removeItem, increaseItemAmount, decreaseItemAmount } = cartSlice.actions
+export const { clearCart, removeItem, increaseItemAmount, decreaseItemAmount, calculateTotals } = cartSlice.actions
 export default cartSlice.reducer
