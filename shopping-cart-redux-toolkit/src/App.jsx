@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 //Reducers
 import { calculateTotals, getCartItems } from "./features/cart/cartSlice"
+import Loading from "./components/Loading"
 
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
   }, [cartItems, dispatch])
 
   if (isLoading) {
-    return <h4>Loading</h4>
+    return <Loading />
   }
 
   return (

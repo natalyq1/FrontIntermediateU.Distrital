@@ -18,5 +18,9 @@ npm i prop-types
 
 npm i axios
 
+npm i @uiball/loaders
+Libreria para cargando
+https://uiball.com/loaders/
+
 en el navegador la extensión:
 Redux devtools
