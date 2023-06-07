@@ -1,19 +1,29 @@
-import { createSlice } from '@reduxjs/toolkit'
-import cartItems from '../../data/cartItems';
-import { closeModal } from '../modal/modalSlice';
-import { useDispatch } from "react-redux"
+import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+//import cartItems from '../../data/cartItems';
 
 // Estado inicial
 const initialState = {
-    cartItems,
+    cartItems: [],
     amount: 0,
     total: 0,
+    isLoading: true,
 }
+
+const url = 'http://localhost:3000/items'
+export const getCartItems = createAsyncThunk(
+    'cart/getCartItems', async ( _, thunkAPI) => {
+        try {
+            const response = await axios.get(url)
+            return response.data
+        } catch (error) {
+            return thunkAPI.rejectWithValue('Something went wrong')
+        }
+    }
+)
 
 // Creación del slice
 const cartSlice = createSlice({
-    
-
     name: 'cart',
     initialState,
     reducers: {
@@ -53,6 +63,23 @@ const cartSlice = createSlice({
             state.amount = totalAmount
             state.total = totalPrice
         }
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(getCartItems.pending, (state) => {
+                // Código cuando la promesa esta pendiente, cargando
+                state.isLoading = true
+            }).addCase(getCartItems.fulfilled, (state, action) => {
+                // Código al completar exitosamente la promesa
+                state.isLoading = false
+                // Obtiene los datos del backend
+                state.cartItems = action.payload
+            }).addCase(getCartItems.rejected, (state) => {
+                // Código al completar la promesa de forma no exitosa
+                state.isLoading = false
+                state.cartItems = []
+                console.warn('Hubo un error');
+            })
     }
 })
 export const { clearCart, removeItem, increaseItemAmount, decreaseItemAmount, calculateTotals } = cartSlice.actions

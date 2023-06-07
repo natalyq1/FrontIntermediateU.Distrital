@@ -16,6 +16,7 @@ npm install sass -D
 
 npm i prop-types
 
+npm i axios
 
 en el navegador la extensión:
 Redux devtools

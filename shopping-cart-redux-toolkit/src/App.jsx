@@ -8,24 +8,33 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 //Reducers
-import { calculateTotals } from "./features/cart/cartSlice"
+import { calculateTotals, getCartItems } from "./features/cart/cartSlice"
 
 
 const App = () => {
   //Obtiene acceso a los items del cart
-  const { cartItems } = useSelector((store) => store.cart)
+  const { cartItems, isLoading } = useSelector((store) => store.cart)
   const { isOpen } = useSelector((store) => store.modal)
   const dispatch = useDispatch()
+
+  //Obtiene los items del backend
+  useEffect(() => {
+    dispatch(getCartItems())
+  }, [dispatch])
 
   useEffect(() => {
     // Recalcula totales cada vez que cambia cartItems
     dispatch(calculateTotals())
   }, [cartItems, dispatch])
 
+  if (isLoading) {
+    return <h4>Loading</h4>
+  }
+
   return (
     <>
-    { isOpen && <Modal />}
-      
+      {isOpen && <Modal />}
+
       <NavBar />
       <CartContainer />
     </>
