@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import cartItems from '../../data/cartItems';
+import { closeModal } from '../modal/modalSlice';
+import { useDispatch } from "react-redux"
 
 // Estado inicial
 const initialState = {
@@ -10,6 +12,8 @@ const initialState = {
 
 // Creación del slice
 const cartSlice = createSlice({
+    
+
     name: 'cart',
     initialState,
     reducers: {
