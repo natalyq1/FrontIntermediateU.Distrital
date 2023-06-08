@@ -1,0 +1,115 @@
+node -v
+npm - v
+npm init vite@latest nombre
+O puedo usar npm init vite@latest nombre-proyecto -- --template react y hace lo mismo
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+cd nombre
+npm install
+npm run dev
+
+npm install sass -D
+//Con esto ya puedo escribir estilos sin necesidad de que compile a css, ya que vite es compatible y lee sass con los .scss
+
+npm install prop-types
+para que lea los tipos de datos o acepte los q son por default
+validacion para las propiedades con libreria prop-types
+
+npm install react-icons
+
+npm install uuid
+
+npm install axios
+
+npm uninstall uuid
+
+
+
+VITE-configuracion y empaquetador
+
+
+funciona como prettier=
+ESLint statically analyzes your code to quickly find problems. It is built into most text editors and you can run ESLint as part of your continuous integration pipeline.
+
+REACT---> son funciones q retornan un resultado
+---> requieren que se renderise una solo etiqueta o fragmento y adentro mis demás etiquetas
+<Fragment></Fragment>
+<> </>
+
+--> hay componentes basados en funciones y en clases
+
+import { Component} from 'react';
+export default class App extends Component {
+    render() {
+        return <h1>React based on class</h1>
+    }
+}
+
+Extension ES7+React/Redux/React-Native-snippets
+----> arrow function con 
+rafce
+const Header = () => {
+    return (
+      <div>Header</div>
+    )
+  }
+
+rafc
+  export const Header = () => {
+    return (
+      <div>Header</div>
+    )
+  }
+
+
+  PROPS
+  import Opcion from "./Components/Opcion/Opcion";
+  <Opcion texto= 'Home'/>
+    <Opcion texto= 'Products'/>
+    <Opcion texto= 'Services'/>
+
+    En Opcion.jsx
+    const Opcion = (props) => {
+        console.log(props.texto);
+      return (
+        <div>{props.texto}</div>
+      )
+    }
+    Opcion.defaultProps = {
+        texto: 'ninguna'
+    }
+    export default Opcion
+
+    o desestructurado
+
+    const Opcion = ({texto, link}) => {
+        console.log(texto);
+      return (
+        <a href={link}>{texto}</a>
+      )
+    }
+
+BACKEND
+    CRuD-Create READ Update Delete
+    Axios
+
+
+HOOKS
+funciones q permiten alterar o extender el comportameinto de los componentes---> solo para componentes de funciona **debe ser estilo function** no const que es para clases**
+ej: 
+    useState : Permite almacenar, leer y modificar los datos locales de un componente. Los datos son el estado del componente.
+    useEffect : Extienden la funcionalidad de los métodos del ciclo de vida de los componentes
+    useContext : Permite acceder a datos globales de aplicación desde cualquier componente sin tener que pasar datos mediante props
+    useReducer : Permite reducir la complejidad manteniendo la lógica en un solo lugar de fácil acceso
+
+
+HOOK: USEREDUCER
+
+Permite reducir la complejidad manteniendo la lógica en un solo lugar de fácil acceso
+Los reducers son una alternativa a useState
+
+1. Cambiar la actualización del State por envío (dispatch) de accciones 
+
+2. Crear una función reducer
+
+3. Utilizar el reducer desde el componente
