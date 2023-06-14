@@ -23,6 +23,14 @@ npm install axios
 
 npm uninstall uuid
 
+FORMIK-Librería para administración de formularios
+declarativa, intuitiva y adaptable-Hooks o componentes--
+
+YUP--libreria de validacion en general- 
+
+npm install formik
+
+npm install yup
 
 
 VITE-configuracion y empaquetador
