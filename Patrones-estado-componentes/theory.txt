@@ -1,0 +1,21 @@
+https://sourcemaking.com/design_patterns
+
+Design Patterns
+In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design. A design pattern isn't a finished design that can be transformed directly into code. It is a description or template for how to solve a problem that can be used in many different situations.
+
+PATRÓN COMPOUND COMPONENT
+Compound component es un patrón en el que los componentes se usan juntos de manera que comparten un estado implícito que les permite comunicarse entre sí en segundo plano
+
+Los componentes trabajan juntos para tener un estado compartido y manejar la lógica juntos
+
+
+
+
+******
+npm init vite@latest nombre
+O puedo usar npm init vite@latest nombre-proyecto -- --template react y hace lo mismo
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+cd nombre
+npm install
+npm run dev
