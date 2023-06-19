@@ -1,0 +1,26 @@
+@use "../variables" as v;
+
+.tab-container {
+  background-color: rgba(200, 110, 110, 0.689);
+
+  .tab-switcher-indicator {
+    display: flex;
+    flex-direction: row;
+
+    span {
+      padding: 0.5em 1.5em;
+      margin: 0.2em;
+      background-color: rgba(128, 128, 128, 0.881);
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+  }
+  .content {
+    padding: 2em;
+    margin: 0.4em 0.2em;
+    background-color: rgba(128, 128, 128, 0.305);
+    border: 1px solid gray;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+  }
+}

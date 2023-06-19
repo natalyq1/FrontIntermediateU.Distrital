@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import TabContext from "../../../TabContext"
+import TabContext from "../context/TabContext"
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 const Tab = ({id, children}) => {

@@ -19,3 +19,5 @@ O puedo usar npm init vite@latest nombre-proyecto -- --template react y hace lo 
 cd nombre
 npm install
 npm run dev
+
+npm install sass -D

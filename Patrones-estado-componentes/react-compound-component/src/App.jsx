@@ -1,9 +1,11 @@
-import TabContainer from "./components/TabContainer"
+import TabContainer from "./components/TabContainer";
 
-const App = () => {
+function App() {
   return (
-    <TabContainer />
+    <div className='tab-container'>
+      <TabContainer/>
+    </div>
   )
 }
 
-export default App
+export default App;

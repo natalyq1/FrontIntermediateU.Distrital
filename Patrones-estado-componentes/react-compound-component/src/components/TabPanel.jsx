@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react"
-import TabContext from "../../../TabContext"
+import TabContext from "../context/TabContext"
 
 const TabPanel = ({whenActive, children}) => {
 

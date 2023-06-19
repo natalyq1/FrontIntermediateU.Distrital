@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
-import TabContext from "../../../TabContext"
+import TabContext from "../context/TabContext";
 
 const TabSwitcher = ({ children }) => {
     const [activeTabId, setActiveTabId] = useState('1')
@@ -9,7 +9,7 @@ const TabSwitcher = ({ children }) => {
       <TabContext.Provider 
       value={[activeTabId, setActiveTabId]}>
         { children}
-      </TabContext.Provider >
+    </TabContext.Provider >
   )
 }
 
