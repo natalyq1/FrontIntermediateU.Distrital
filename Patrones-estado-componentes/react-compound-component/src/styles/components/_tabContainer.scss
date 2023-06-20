@@ -1,23 +1,34 @@
-@use "../variables" as v;
+$font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  @use "../variables" as v;
 
 .tab-container {
-  background-color: rgba(200, 110, 110, 0.689);
+  font-family: $font-family;
+  background-color: rgba(136, 71, 154, 0.455);
 
   .tab-switcher-indicator {
     display: flex;
     flex-direction: row;
 
-    span {
+    .tab {
       padding: 0.5em 1.5em;
-      margin: 0.2em;
+      margin: 0.2em 0.5em 0 0.2em ;
       background-color: rgba(128, 128, 128, 0.881);
       border-top-left-radius: 7px;
       border-top-right-radius: 7px;
+      span{
+        cursor: pointer;
+      }
+      &__active {
+      background-color: #8e8e8e;
+      color: #761279;
+      padding-top: 0.7em;
+    }
     }
   }
-  .content {
+  .tab-panel {
     padding: 2em;
-    margin: 0.4em 0.2em;
+    margin: 0em 0.2em;
     background-color: rgba(128, 128, 128, 0.305);
     border: 1px solid gray;
     border-radius: 12px;

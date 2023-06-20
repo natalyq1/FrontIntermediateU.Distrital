@@ -3,9 +3,11 @@ import TabContext from "../context/TabContext"
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 const Tab = ({id, children}) => {
-    const [, setActiveTabId] = useContext(TabContext)
+  const [activeTabId, setActiveTabId] = useContext(TabContext)
   return (
-    <div onClick={() => setActiveTabId(id)}>{children}</div>
+    <div 
+    className={`tab ${activeTabId === id ? "tab__active" : ""}`} 
+    onClick={() => setActiveTabId(id)}>{children}</div>
   )
 }
 

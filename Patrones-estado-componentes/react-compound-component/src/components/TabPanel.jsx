@@ -2,13 +2,13 @@
 import { useContext } from "react"
 import TabContext from "../context/TabContext"
 
-const TabPanel = ({whenActive, children}) => {
+const TabPanel = ({ whenActive, children }) => {
 
-    const [activeTabId] = useContext(TabContext)
+  const [activeTabId] = useContext(TabContext)
 
   return (
-    <div>
-        {activeTabId === whenActive ? children : null}
+    <div className={activeTabId === whenActive ? "tab-panel" : ""}>
+      {activeTabId === whenActive ? children : null}
     </div>
   )
 }

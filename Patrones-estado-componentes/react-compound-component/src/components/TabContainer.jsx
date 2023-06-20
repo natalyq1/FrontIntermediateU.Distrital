@@ -7,7 +7,7 @@ const TabContainer = () => {
   return (
       <TabSwitcher>
         <div className="tab-switcher-indicator">
-          <Tab id='1' className=''>
+          <Tab id='1'>
               <span>Tab 1</span>
           </Tab>
           <Tab id='2'>
@@ -18,7 +18,6 @@ const TabContainer = () => {
           </Tab>
           </div>
 
-        <section className="content">
           <TabPanel whenActive='1'>
               <span> Contenido 1</span>
           </TabPanel>
@@ -28,7 +27,6 @@ const TabContainer = () => {
           <TabPanel whenActive='3'>
               <span> Contenido 3</span>
           </TabPanel>
-          </section>
       </TabSwitcher>
   )
 }
