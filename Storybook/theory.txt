@@ -1,0 +1,42 @@
+Storybook es un entorno frontend
+https://storybook.js.org/
+
+Storybook es un taller de interfaz para crear componentes y páginas de interfaz de usuario de forma aislada. Miles de equipos lo utilizan para el desarrollo, las pruebas y la documentación de la interfaz de usuario. Es de código abierto y gratuito.
+
+VENTAJAS DE STORYBOOK
+No mezcla lógica de negocio
+
+Aislamiento de desarrollo
+
+Orientado a reutilización
+
+Facilidad de pruebas
+
+Integración con terceros + Addons(extensiones)
+
+Mejora la calidad del código
+
+Facilita la comunicación entre el equipo
+
+Mejora la documentación
+
+
+
+node --version
+npm --version
+
+Storybook se agrega a un proyecto existente
+Storybook no está hecho para proyectos vacíos
+
+Ejemplo de creación de proyecto de React con Vite
+    npm init vite@latest storybook-react
+    javascritp
+    react
+    cd storybook-react
+    npm install
+    npm run dev
+
+Agregar Storybook al proyecto de React
+    npx storybook@latest init
+    y
+    npm run storybook
