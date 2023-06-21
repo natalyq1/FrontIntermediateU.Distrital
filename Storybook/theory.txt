@@ -40,3 +40,5 @@ Agregar Storybook al proyecto de React
     npx storybook@latest init
     y
     npm run storybook
+
+se usa proptypes, ya lo trae instalado
