@@ -5,14 +5,40 @@ export default {
 }
 
 //stories
-export const Basic = {
+export const Primary = {
     args:{
-        label: 'Basic',
+        label: 'Primary',
+        primary: true
     }
 }
 
-export const Advanced = {
+export const Secondary = {
     args: {
-        label: 'Advanced',
+        label: 'Secondary',
+        primary: false
+    }
+}
+
+export const Large = {
+    args: {
+        label: 'Grande',
+        primary: false,
+        size: 'large'
+    }
+}
+
+export const Medium = {
+    args: {
+        label: 'Medio',
+        primary: false,
+        size: 'medium'
+    }
+}
+
+export const Small = {
+    args: {
+        label: 'Pequeño',
+        primary: false,
+        size: 'small'
     }
 }
