@@ -1,7 +1,8 @@
 import { Boton }from "./Boton";
 
 export default {
-    component: Boton
+    component: Boton,
+    title: 'Components/Boton'
 }
 
 //stories
