@@ -19,8 +19,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Boton label='Clickeame' primary={false} size='large' onClick={() => setCount((count) => count + 1)}>
-          El contador es {count}
+        <Boton label={`El contador es ${count}`} primary={false} size='large' onClick={() => setCount((count) => count + 1)}>
+         
         </Boton>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
