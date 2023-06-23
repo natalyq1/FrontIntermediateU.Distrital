@@ -1,0 +1,55 @@
+import { Meta, Description, Canvas, Controls } from "@storybook/blocks";
+import * as TituloStories from ".//Titulo.stories.js";
+import PluginImage from '../assets/plugin.svg';
+
+<Meta of={TituloStories} name="Docs" />
+<Description of={TituloStories} />
+
+<style>
+  {`
+    .mensaje {
+        border: 1px solid orange;
+        background-color: #fff9c4;
+        color: orange;
+        padding: 10px;
+        margin: 10px;
+    }
+`}
+</style>
+
+# Documentacón del componente Titulo
+
+El componente está diseñado para mostrar títulos en la aplicación recibiendo parámetros que hacen que la visualización sea flexible.
+
+## Subtítulo
+Texto abajo de Subtítulo.
+
+## Herramientas de Frontend
+- HTML
+- CSS
+- Javascript
+- Typescript
+- React
+- Sass
+
+## Imágenes
+
+<img src={PluginImage} alt='Imagen de plugin'/>
+
+<div style={{ color: "red" }}>Este componente está con estilo</div>
+<div class="mensaje">Este componente está en desarrollo</div>
+
+## Código fuente
+
+Este es el ejemplo de una `variable` dentro de un párrafo.
+
+```js
+console.log('Hello world')
+```
+{/*Este es un comentario del documento*/}
+
+### Header 1
+<Canvas of={TituloStories.Header1} sourceState='shown' />
+
+#### Controles del Header 1
+<Controls of={TituloStories.Header1} />

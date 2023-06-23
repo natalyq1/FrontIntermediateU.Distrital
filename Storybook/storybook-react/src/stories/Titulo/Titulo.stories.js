@@ -3,7 +3,7 @@ import Titulo from "./Titulo";
 export default {
     component: Titulo,
     title: 'Atoms/Titulo',
-    tags: ['autodocs'],
+    //tags: ['autodocs'],
     argTypes: {
         nivel: {
             //select, radio, inline-radio
