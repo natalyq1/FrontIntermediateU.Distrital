@@ -20,3 +20,9 @@ ng serve
 ng serve --open ////este abre de una vez en navegador
 
 main.ts---de donde arranca mi app
+
+tenemos un INDEX.html que renderizar otros mini html que ya no necesitan la estructura del doctype, ya q el principal lo tiene y ahi se renderiza
+
+CREA UN COMPONENTE EN APP
+ng generate component components/balance
+ng g c components/balance
