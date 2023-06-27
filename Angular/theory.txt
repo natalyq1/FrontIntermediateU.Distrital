@@ -1,0 +1,22 @@
+Angular
+Framework de desarrollo web para frontend besado en componentes
+SPA- Single page application
+Typescript
+Trae su propia libreria para comunicarse con el backend
+Angular es restrictivo con sus librerias
+
+npm install -g @angular/cli
+
+verificar
+    ng version
+
+crear proyecto
+    ng new angular-expenses-tracker
+    y
+    SCSS
+    cd angular-expenses-tracker
+
+ng serve
+ng serve --open ////este abre de una vez en navegador
+
+main.ts---de donde arranca mi app
