@@ -1,9 +1,18 @@
-
-
 <!--expresión booleana--Si existe balance, ejecute-->
-<div if *ngIf="balance">
-<p>balance works!</p>
-<p>Amount: {{balance.amount}}</p>
-<p>Income: {{balance.income}}</p>
-<p>Expenses: {{balance.expenses}}</p>
+<div if *ngIf="balance" class="main">
+  <article class="balance">
+    <h4>Total Balance</h4>
+    <p>$ {{balance.amount}}</p>
+  </article>
+
+  <section class="Income-expenses">
+    <article class="income">
+      <h4>Income</h4>
+      <p>$ {{balance.income}}</p>
+    </article>
+    <article class="expenses">
+      <h4>Expenses</h4>
+      <p>$ {{balance.expenses}}</p>
+    </article>
+  </section>
 </div>

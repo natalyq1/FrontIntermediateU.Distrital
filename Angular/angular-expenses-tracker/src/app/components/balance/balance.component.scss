@@ -1,0 +1,38 @@
+@use "../../../styles.scss" as v;
+
+.main {
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 1em;
+  padding: 1.5em;
+}
+.balance {
+  margin: 0 0 2em 0;
+}
+.balance h4,
+.balance p {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.balance p,
+.income p,
+.expenses p {
+  font-family: v.$font-family;
+  font-weight: 500;
+  font-size: 2em;
+  margin-top: 0.2em;
+}
+.Income-expenses {
+  display: flex;
+  justify-content: space-around;
+}
+.income,
+.income h4 {
+  color: green;
+}
+.expenses,
+.expenses h4 {
+  color: red;
+}
