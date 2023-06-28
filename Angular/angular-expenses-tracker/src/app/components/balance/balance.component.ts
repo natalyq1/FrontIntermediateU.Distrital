@@ -7,11 +7,6 @@ import { Balance } from '../../models/balance.model';
   styleUrls: ['./balance.component.scss']
 })
 export class BalanceComponent {
-  //Parámetro de entrada
-  @Input() title: string = '';
-  @Input() balance: Balance = {
-    amount: 55_000,
-    income: 100_000,
-    expenses: 45_000
-  }
+  // ! es para decirle que le va allegar un valor
+  @Input() balance!: Balance;
 }

@@ -1,6 +1,9 @@
-<h3>{{title}}</h3>
 
+
+<!--expresión booleana--Si existe balance, ejecute-->
+<div if *ngIf="balance">
 <p>balance works!</p>
-<p>{{balance.amount}}</p>
-<p>{{balance.income}}</p>
-<p>{{balance.expenses}}</p>
+<p>Amount: {{balance.amount}}</p>
+<p>Income: {{balance.income}}</p>
+<p>Expenses: {{balance.expenses}}</p>
+</div>
