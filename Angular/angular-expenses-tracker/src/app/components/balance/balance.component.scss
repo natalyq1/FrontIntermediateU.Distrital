@@ -3,7 +3,7 @@
 .main {
   margin: 0 auto;
   border-radius: 8px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid map-get(v.$colors, "balance");
   margin: 1em;
   padding: 1.5em;
 }
@@ -14,7 +14,7 @@
 .balance p {
   display: flex;
   justify-content: center;
-  color: white;
+  color: map-get(v.$colors, "balance");
 }
 .balance p,
 .income p,
@@ -30,9 +30,9 @@
 }
 .income,
 .income h4 {
-  color: green;
+  color: map-get(v.$colors, "income");
 }
 .expenses,
 .expenses h4 {
-  color: red;
+  color: map-get(v.$colors, "expenses");;
 }

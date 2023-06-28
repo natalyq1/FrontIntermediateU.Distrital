@@ -2,17 +2,17 @@
 <div if *ngIf="balance" class="main">
   <article class="balance">
     <h4>Total Balance</h4>
-    <p>$ {{balance.amount}}</p>
+    <p>{{balance.amount | currency}}</p>
   </article>
 
   <section class="Income-expenses">
     <article class="income">
       <h4>Income</h4>
-      <p>$ {{balance.income}}</p>
+      <p>{{balance.income | currency}}</p>
     </article>
     <article class="expenses">
       <h4>Expenses</h4>
-      <p>$ {{balance.expenses}}</p>
+      <p>{{balance.expenses | currency}}</p>
     </article>
   </section>
 </div>
