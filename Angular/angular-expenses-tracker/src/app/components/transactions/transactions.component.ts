@@ -4,8 +4,11 @@ import { Transaction } from '../../models/transaction.model';
 @Component({
   selector: 'app-transactions',
   templateUrl: './transactions.component.html',
-  styleUrls: ['./transactions.component.scss']
+  styleUrls: ['./transactions.component.scss'],
 })
 export class TransactionsComponent {
   @Input() transactions!: Transaction[];
+  removeTransaction(transactionId: string) {
+    console.log(`Eliminando la transacción ${transactionId}...`);
+  }
 }

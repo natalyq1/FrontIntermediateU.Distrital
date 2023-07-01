@@ -1,37 +1,40 @@
 @use "../../../styles.scss" as v;
 
-.main {
-  margin: 1em auto;
-  border-radius: 8px;
-  border: 2px solid map-get(v.$colors, "balance");
-  padding: 1.5em;
-}
 .balance {
-  margin: 0 0 2em 0;
-}
-.balance h4,
-.balance p {
-  display: flex;
-  justify-content: center;
-  color: map-get(v.$colors, "balance");
-}
-.balance p,
-.income p,
-.expenses p {
+  
+  border-radius: 20px;
+  padding: 25px;
   font-family: v.$font-family;
-  font-weight: 500;
-  font-size: 2em;
-  margin-top: 0.2em;
-}
-.Income-expenses {
-  display: flex;
-  justify-content: space-around;
-}
-.income,
-.income h4 {
-  color: map-get(v.$colors, "income");
-}
-.expenses,
-.expenses h4 {
-  color: map-get(v.$colors, "expenses");;
+
+  &__header {
+    margin: 1.7em auto;
+    color: map-get(v.$colors, "balance");
+    h4 {
+      font-weight: 200;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    h4 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+    .balance__income {
+      color: map-get(v.$colors, "income");
+    }
+    .balance__expenses {
+      color: map-get(v.$colors, "expenses");
+    }
+  }
 }
