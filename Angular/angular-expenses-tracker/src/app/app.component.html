@@ -4,6 +4,6 @@
   <app-balance [balance]="balance"/>
  <br>
 
-  <app-transactions [transactions]="transactions" />
+  <app-transactions [transactions]="transactions" (removeTransactionEvent)=" removeTransaction($event)" />
 </div>
 
