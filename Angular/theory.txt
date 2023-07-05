@@ -26,3 +26,17 @@ tenemos un INDEX.html que renderizar otros mini html que ya no necesitan la estr
 CREA UN COMPONENTE EN APP
 ng generate component components/balance
 ng g c components/balance
+****************************
+Reactive Form
+Formularios complejos, Ofrecen más control, Basados en clase Typescript
+para forms 
+//Libreria que viene con Angular para forms
+    app.module.ts
+        import { ReactiveFormsModule } from '@angular/forms';
+             imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+    add-transaction.component.ts
+        import { FormGroup } from '@angular/forms';
+            export class AddTransactionComponent {
+                AddTransactionFrom!: FormGroup}
+
+    
