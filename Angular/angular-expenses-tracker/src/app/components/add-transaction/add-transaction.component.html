@@ -12,19 +12,36 @@
     formControlName="amount"
     />
     <div class="add-transaction__type">
-      <input type="radio" id="expense" name="type" value="expense" checked />
+      <input
+      type="radio"
+      id="expense"
+      name="type"
+      value="expense"
+      formControlName="type"
+      />
       <label for="expense">Expense</label>
 
-      <input type="radio" id="income" name="type" value="income" />
+      <input
+      type="radio"
+      id="income"
+      name="type"
+      value="income"
+      formControlName="type"
+      />
       <label for="expense">Income</label>
     </div>
-    <select name="" id="category">
+    <select
+    formControlName="category">
       <option value="food">Food</option>
       <option value="utilities">Utilities</option>
       <option value="shopping">Shopping</option>
       <option value="payroll">Payroll</option>
     </select>
-    <input type="date" id="date">
+    <input
+    type="date"
+    id="date"
+    formControlName="date"
+    >
     <button type="submit">Save</button>
   </form>
   <a routerLink="/">Cancel</a>
