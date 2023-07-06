@@ -99,4 +99,10 @@
     color: #a4bafb;
     margin-top: 1em;
   }
+  &__error-message {
+    font-family: s.$font-family;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #a4bafb;
+  }
 }
