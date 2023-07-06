@@ -15,7 +15,7 @@ export class AddTransactionComponent implements OnInit {
 
     //Hook que se ejecuta al montar el componente en el DOM
     this.addTransactionForm = new FormGroup({
-      amount: new FormControl(null, Validators.required),
+      amount: new FormControl(null, [Validators.required, Validators.pattern('^[0-9]+$')]),
       type: new FormControl('expense'),
       category: new FormControl('food'),
       date: new FormControl(date),

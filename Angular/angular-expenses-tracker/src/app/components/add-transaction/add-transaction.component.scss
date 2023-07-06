@@ -99,6 +99,11 @@
     color: #a4bafb;
     margin-top: 1em;
   }
+
+  input.ng-invalid.ng-touched {
+    border: 2px solid #a4bafb;
+  }
+
   &__error-message {
     font-family: s.$font-family;
     font-style: italic;

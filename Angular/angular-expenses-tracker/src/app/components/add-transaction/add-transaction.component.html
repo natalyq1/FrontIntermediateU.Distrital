@@ -1,13 +1,24 @@
 <div class="add-transaction">
   <h2>Add Transaction</h2>
+
+  <!--
+    <div style="border: 1px solid red">
+      <h1>{{ addTransactionForm.get("amount")?.errors | json }}</h1>
+      <h1>{{ addTransactionForm.get("amount")?.invalid }}</h1>
+      <h1>{{ addTransactionForm.get("amount")?.touched }}</h1>
+    </div>
+-->
+
   <form class="add-transaction__form" autocomplete="off" [formGroup]="addTransactionForm" (ngSubmit)="onSubmit()">
     <input type="text" class="add-transaction__amount" autofocus formControlName="amount" />
-    <div class="add-transaction__error-message"
-    *ngIf="addTransactionForm.get('amount') ?.invalid &&
-    addTransactionForm.get('amount') ?.touched
-    "
-    >Amount is required</div>
+    <div class="add-transaction__error-message" *ngIf="addTransactionForm.get('amount')?.invalid &&
+    addTransactionForm.get('amount')?.touched
+    ">
 
+    <span *ngIf="addTransactionForm.get('amount')?.errors?.['required']">Amount required</span>
+
+    <span *ngIf="addTransactionForm.get('amount')?.errors?.['pattern']">Valid number required</span>
+</div>
     <div class="add-transaction__type">
       <input type="radio" id="expense" name="type" value="expense" formControlName="type" />
       <label for="expense">Expense</label>
