@@ -120,6 +120,20 @@
       "amount": 20,
       "category": "food",
       "date": "2023-06-24"
+    },
+    {
+      "amount": "200",
+      "type": "income",
+      "category": "food",
+      "date": "2023-07-07",
+      "id": "brDHFW8"
+    },
+    {
+      "amount": "100",
+      "type": "expense",
+      "category": "utilities",
+      "date": "2023-07-06",
+      "id": "aN-HuP3"
     }
   ]
 }

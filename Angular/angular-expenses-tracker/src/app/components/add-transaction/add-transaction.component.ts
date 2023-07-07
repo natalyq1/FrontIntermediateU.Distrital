@@ -1,6 +1,9 @@
+import { Transaction } from 'src/app/models/transaction.model';
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TransactionsService } from 'src/app/services/transactions.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-transaction',
@@ -9,13 +12,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddTransactionComponent implements OnInit {
   addTransactionForm!: FormGroup;
+
+  constructor(private transactionsService: TransactionsService, private router: Router) {}
+
   ngOnInit(): void {
     const date: string = new Date().toISOString().split('T')[0];
     //const date: string = formatDate(new Date(2022, 7, 30), 'yyyy-MM-dd', 'en')
 
     //Hook que se ejecuta al montar el componente en el DOM
     this.addTransactionForm = new FormGroup({
-      amount: new FormControl(null, [Validators.required, Validators.pattern('^[0-9]+$')]),
+      amount: new FormControl(0, [
+        Validators.required,
+        Validators.pattern('^[0-9]+$'),
+      ]),
       type: new FormControl('expense'),
       category: new FormControl('food'),
       date: new FormControl(date),
@@ -23,11 +32,17 @@ export class AddTransactionComponent implements OnInit {
   }
 
   onSubmit() {
+    // Verifica si el form es válido
     if (this.addTransactionForm.valid) {
-      console.log(this.addTransactionForm);
-      console.log(this.addTransactionForm.value);
-      //this.addTransactionForm.reset();
-      alert('Everything is ok');
+      //Obtiene el objeto Transaction del form
+      const newTransaction: Transaction = this.addTransactionForm.value;
+      //Usa el servicio para crear una transaccion en el backend
+      this.transactionsService
+        .create(newTransaction)
+        .subscribe((response: Transaction) => {
+          //Redirecciona al home
+          this.router.navigate([''])
+        });
     } else {
       console.error('The form is not valid');
     }
