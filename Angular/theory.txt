@@ -39,4 +39,29 @@ para forms
             export class AddTransactionComponent {
                 AddTransactionFrom!: FormGroup}
 
-    
+
+Dependency Injection DI
+DI permite declarar las dependencias de las clases sin ocuparse de la creación de instancias
+
+Patrón de diseño que permite escribir código más flexible y menos dependiente de otras clases
+
+Services
+
+Un servicio es una categoría amplia que abarca cualquier valor, función o característica que necesita una aplicación
+
+Un servicio es típicamente una clase con un propósito bien definido que puede ser usada por un componente utilizando DI
+
+
+BACKEND--HTTPClientModule
+    EN app.module.ts    
+        import { HttpClientModule } from '@angular/common/http';
+        imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+
+en consola CLI
+    ng generate service services/transactions
+me crea una carpeta services con 2 archivos
