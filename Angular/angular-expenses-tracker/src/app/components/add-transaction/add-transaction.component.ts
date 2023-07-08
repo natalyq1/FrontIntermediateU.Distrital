@@ -28,9 +28,9 @@ export class AddTransactionComponent implements OnInit {
         Validators.required,
         Validators.pattern('^[0-9]+$'),
       ]),
-      type: new FormControl('expense'),
-      category: new FormControl('food'),
-      date: new FormControl(date),
+      type: new FormControl('expense', Validators.required),
+      category: new FormControl('food', Validators.required),
+      date: new FormControl(date, Validators.required),
     });
   }
 

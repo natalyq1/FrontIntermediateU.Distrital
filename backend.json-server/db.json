@@ -115,18 +115,25 @@
       "date": "2023-06-24"
     },
     {
-      "amount": "200",
+      "amount": 200,
       "type": "income",
       "category": "food",
       "date": "2023-07-07",
       "id": "brDHFW8"
     },
     {
-      "amount": "100",
+      "amount": 100,
       "type": "expense",
       "category": "utilities",
       "date": "2023-07-06",
       "id": "aN-HuP3"
+    },
+    {
+      "amount": 300,
+      "type": "income",
+      "category": "payroll",
+      "date": "2023-07-08",
+      "id": "RjEw0nk"
     }
   ]
 }
