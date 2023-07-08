@@ -101,13 +101,6 @@
       "date": "2023-06-21"
     },
     {
-      "id": "3",
-      "type": "expense",
-      "amount": 60,
-      "category": "entertainment",
-      "date": "2023-06-22"
-    },
-    {
       "id": "4",
       "type": "income",
       "amount": 100,

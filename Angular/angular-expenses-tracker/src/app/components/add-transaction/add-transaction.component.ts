@@ -13,7 +13,10 @@ import { Router } from '@angular/router';
 export class AddTransactionComponent implements OnInit {
   addTransactionForm!: FormGroup;
 
-  constructor(private transactionsService: TransactionsService, private router: Router) {}
+  constructor(
+    private transactionsService: TransactionsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     const date: string = new Date().toISOString().split('T')[0];
@@ -41,7 +44,7 @@ export class AddTransactionComponent implements OnInit {
         .create(newTransaction)
         .subscribe((response: Transaction) => {
           //Redirecciona al home
-          this.router.navigate([''])
+          this.router.navigate(['']);
         });
     } else {
       console.error('The form is not valid');

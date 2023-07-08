@@ -12,14 +12,14 @@ export class TransactionsService {
   constructor(private httpClient: HttpClient) {}
 
   public getTransactions(): Observable<Transaction[]> {
-    return this.httpClient.get<Transaction[]>(
-      this.url
-    );
+    return this.httpClient.get<Transaction[]>(this.url);
   }
 
   public create(transaction: Transaction): Observable<Transaction> {
-    return this.httpClient.post<Transaction>(
-      this.url, transaction
-    );
+    return this.httpClient.post<Transaction>(this.url, transaction);
+  }
+  public remove(transactionId: string): Observable<Transaction> {
+    //Remove a transaction given its Id
+    return this.httpClient.delete<Transaction>(`${this.url}/${transactionId}`);
   }
 }
