@@ -5,8 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-// Componentes
+//Routing del modulo
 import { AppRoutingModule } from './app-routing.module';
+
+// Componentes
 import { AppComponent } from './app.component';
 import { BalanceComponent } from './components/balance/balance.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';

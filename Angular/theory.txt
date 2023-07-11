@@ -65,3 +65,24 @@ BACKEND--HTTPClientModule
 en consola CLI
     ng generate service services/transactions
 me crea una carpeta services con 2 archivos
+
+////////////
+Lazy Loading
+Permite cargar recursos de una ruta sólo cuando el usuario navega a la ruta
+    ng g m auth --routing
+    ng g c auth/pages/signin
+
+ng serve -- open
+Initial Chunk Files            | Names            |  Raw Size
+vendor.js                      | vendor           |   2.57 MB | 
+polyfills.js                   | polyfills        | 333.18 kB | 
+styles.css, styles.js          | styles           | 232.22 kB | 
+main.js                        | main             |  65.30 kB | 
+runtime.js                     | runtime          |  12.66 kB | 
+
+                               | Initial Total    |   3.20 MB
+
+Lazy Chunk Files               | Names            |  Raw Size
+src_app_auth_auth_module_ts.js | auth-auth-module |   8.96 kB | 
+
+http://localhost:4200/auth/signin
