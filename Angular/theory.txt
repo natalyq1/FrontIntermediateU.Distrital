@@ -98,3 +98,5 @@ da muchos errores porq prueba toda la aplicación
 un componente
   ng test --include='src/app/components/balance'
 
+  ng test --include='src/app/components/transactions'
+
