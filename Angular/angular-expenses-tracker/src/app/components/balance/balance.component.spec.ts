@@ -60,5 +60,16 @@ describe('BalanceComponent', () => {
     expect(expensesElement?.textContent).toBe('$50.00');
 
   });
+  it('should have the right amount, income and expenses', () => {
+    component.balance= {
+      amount: 200,
+      income: 300,
+      expenses: 100
+    };
+    fixture.detectChanges()
+    expect(component.balance.amount).toBe(
+      component.balance.income- component.balance.expenses
+    )
+  });
 
 });
