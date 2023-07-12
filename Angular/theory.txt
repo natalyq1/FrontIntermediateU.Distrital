@@ -86,3 +86,15 @@ Lazy Chunk Files               | Names            |  Raw Size
 src_app_auth_auth_module_ts.js | auth-auth-module |   8.96 kB | 
 
 http://localhost:4200/auth/signin
+
+
+
+/////////////////
+UNIT testing con Karma------ archivos .spec.ts
+Ejecuta los tests de todos los archivos "spec.ts" de la aplicación
+    ng test
+da muchos errores porq prueba toda la aplicación
+
+un componente
+  ng test --include='src/app/components/balance'
+
