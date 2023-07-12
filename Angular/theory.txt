@@ -100,3 +100,5 @@ un componente
 
   ng test --include='src/app/components/transactions'
 
+  ng test --include='src/app/services'
+
