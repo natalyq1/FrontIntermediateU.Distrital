@@ -15,6 +15,11 @@ export class TransactionsService {
     return this.httpClient.get<Transaction[]>(this.url);
   }
 
+  //Crear una funcion que dado un Id retorne del be una transaccion
+  public getById(transactionId: string): Observable<Transaction> {
+    return this.httpClient.get<Transaction>(`${this.url}/${transactionId}`);
+  }
+
   public create(transaction: Transaction): Observable<Transaction> {
     return this.httpClient.post<Transaction>(this.url, transaction);
   }
@@ -22,5 +27,4 @@ export class TransactionsService {
     //Remove a transaction given its Id
     return this.httpClient.delete<Transaction>(`${this.url}/${transactionId}`);
   }
-
 }

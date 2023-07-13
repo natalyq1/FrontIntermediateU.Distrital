@@ -29,7 +29,16 @@ describe('TransactionsService', () => {
   it('should get the right type of a transaction', (done) => {
     service.getTransactions().subscribe((transactions: Transaction[]) => {
       const transaction: Transaction = transactions[3];
+      console.log(transaction);
       expect(transaction.type).toBe('expense');
+      done();
+    });
+  });
+
+  /*Ejecutar getById y probar q la transaccion obtenida tiene un amount esperado*/
+  it('should have the right amount', (done) => {
+    service.getById('5').subscribe((transaction: Transaction) => {
+      expect(transaction.amount).toBe(20);
       done();
     });
   });
