@@ -1,3 +1,32 @@
+
+/***************************************/
+Para cada microfrontend debo borrar el .git
+/***************************************/
+
+ARQUITECTURA MICROFRONTEND
+Divide estructuras monolíticas en componentes más pequeños que pueden ser ensamblados en una sola página o aplicación
+
+PROS DE MICROFRONTENDS
+Arquitectura modular y reutilizable
+
+Escalabilidad
+
+Mantenimiento
+
+Desarrollo independiente y más rápido
+
+Diferentes tecnologías para diferentes proyectos
+
+YCONS DE MICROFRONTENDS
+Más difícil testing de toda la aplicación
+
+Compartir código, estado y datos no es fácil
+
+Trabajo adicional de Devops para deploy
+
+
+
+
 npx create-single-spa
     
     Directory for new project .
@@ -7,5 +36,42 @@ npx create-single-spa
 ? Would you like to use single-spa Layout Engine Yes
 ? Organization name (can use letters, numbers, dash or underscore) ecommerce
 
+npm start
+
 "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
 "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js"
+
+
+ npx create-single-spa
+? Directory for new project mf-product
+? Select type to generate single-spa application / parcel
+? Which framework do you want to use? react
+? Which package manager do you want to use? npm
+? Will this project use Typescript? Yes
+? Organization name (can use letters, numbers, dash or underscore) team-product
+? Project name (can use letters, numbers, dash or underscore) mf-product
+
+cd .\mf-product\
+npm i
+npm start
+
+en index.ejs
+    <% if (isLocal) { %>
+    <script type="systemjs-importmap">
+    {
+      "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@ecommerce/root-config": "//localhost:9000/ecommerce-root-config.js",
+        "@team-product/mf-product": "//localhost:8080/team-product-mf-product.js"
+      }
+    }
+  </script>
+    <% } %>
+
+en microfronend-layout.html
+<route default>
+      <application name="@single-spa/welcome"></application>
+      <application name="@team-product/mf-product"></application>
+    </route>
